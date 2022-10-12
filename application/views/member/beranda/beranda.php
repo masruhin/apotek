@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             href="<?php echo base_url()?>/assets/images/favicon.png"
             type="image/ico">
         <title>Apotek Bhamada</title>
-        <meta name="author" content="Paber">
+        <meta name="author" content="Masruhin">
         <!-- Mobile Metas -->
         <meta
             name="viewport"

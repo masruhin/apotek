@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<meta charset="UTF-8"> 
 		<link rel="shortcut icon" href="<?php echo base_url()?>/assets/images/favicon.png" type="image/ico">   
 		<title>Apotek Bhamada</title>    
-		<meta name="author" content="Paber">  
+		<meta name="author" content="Masruhin">  
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	    <link rel="stylesheet" href="<?php echo base_url()?>/assets/vendor/bootstrap/css/bootstrap.css" />
 		<link rel="stylesheet" href="<?php echo base_url()?>/assets/vendor/font-awesome/css/font-awesome.css" />

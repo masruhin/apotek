@@ -79,8 +79,8 @@ class Laporan extends CI_Controller {
         $conditions['kategori']['excel'] = "excel"; 
         $postdata = $this->laporan_model->getrowspo($conditions); 
 
-        $spreadsheet->getProperties()->setCreator('Paber Panjaitan')
-        ->setLastModifiedBy('Paber Panjaitan')
+        $spreadsheet->getProperties()->setCreator(' Panjaitan')
+        ->setLastModifiedBy('Masruhin')
         ->setTitle('Laporan Format Excel')
         ->setSubject('Laporan Format Excel');
  
@@ -191,8 +191,8 @@ class Laporan extends CI_Controller {
         $conditions['kategori']['excel'] = "excel"; 
         $postdata = $this->laporan_model->getrowspembelian($conditions); 
 
-        $spreadsheet->getProperties()->setCreator('Paber Panjaitan')
-        ->setLastModifiedBy('Paber Panjaitan')
+        $spreadsheet->getProperties()->setCreator('Masruhin')
+        ->setLastModifiedBy('Masruhin')
         ->setTitle('Laporan Format Excel')
         ->setSubject('Laporan Format Excel');
  
@@ -303,8 +303,8 @@ class Laporan extends CI_Controller {
         $conditions['kategori']['excel'] = "excel"; 
         $postdata = $this->laporan_model->getrowspenerima($conditions); 
 
-        $spreadsheet->getProperties()->setCreator('Paber Panjaitan')
-        ->setLastModifiedBy('Paber Panjaitan')
+        $spreadsheet->getProperties()->setCreator('Masruhin')
+        ->setLastModifiedBy('Masruhin')
         ->setTitle('Laporan Format Excel')
         ->setSubject('Laporan Format Excel');
  
@@ -406,8 +406,8 @@ class Laporan extends CI_Controller {
         $conditions['kategori']['excel'] = "excel"; 
         $postdata = $this->laporan_model->getrowsstok($conditions); 
 
-        $spreadsheet->getProperties()->setCreator('Paber Panjaitan')
-        ->setLastModifiedBy('Paber Panjaitan')
+        $spreadsheet->getProperties()->setCreator('Masruhin')
+        ->setLastModifiedBy('Masruhin')
         ->setTitle('Laporan Format Excel')
         ->setSubject('Laporan Format Excel');
  
@@ -519,8 +519,8 @@ class Laporan extends CI_Controller {
         $conditions['kategori']['excel'] = "excel"; 
         $postdata = $this->laporan_model->getrowspenjualan($conditions); 
 
-        $spreadsheet->getProperties()->setCreator('Paber Panjaitan')
-        ->setLastModifiedBy('Paber Panjaitan')
+        $spreadsheet->getProperties()->setCreator('Masruhin')
+        ->setLastModifiedBy('Masruhin')
         ->setTitle('Laporan Format Excel')
         ->setSubject('Laporan Format Excel');
  
@@ -624,8 +624,8 @@ class Laporan extends CI_Controller {
         $conditions['kategori']['excel'] = "excel"; 
         $postdata = $this->laporan_model->getrowskeuangan($conditions); 
 
-        $spreadsheet->getProperties()->setCreator('Paber Panjaitan')
-        ->setLastModifiedBy('Paber Panjaitan')
+        $spreadsheet->getProperties()->setCreator('Masruhin')
+        ->setLastModifiedBy('Masruhin')
         ->setTitle('Laporan Format Excel')
         ->setSubject('Laporan Format Excel');
  
