@@ -5,9 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <aside id="sidebar-left" class="sidebar-left">
 
     <div class="sidebar-header">
-        <div class="sidebar-title">
-            
-        </div>
+        <div class="sidebar-title"></div>
         <div
             class="sidebar-toggle hidden-xs"
             data-toggle-class="sidebar-left-collapsed"
@@ -24,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li>
                         <a href="<?php echo base_url()?>">
                             <i class="fa fa-home" aria-hidden="true"></i>
-                            <span>Dashboard</span>
+                            <span>Home</span>
                         </a>
                     </li>
                     <li>
@@ -35,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </li>
                     <li>
                         <a href="<?php echo base_url()?>pembelian">
-                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            <i class="fa fa-inbox" aria-hidden="true"></i>
                             <span>Pembelian</span>
                         </a>
                     </li>
@@ -65,7 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </li>
                     <li>
                         <a href="<?php echo base_url()?>user">
-                            <i class="fa fa-users" aria-hidden="true"></i>
+                            <i class="fa fa-user-md" aria-hidden="true"></i>
                             <span>Manajemen User</span>
                         </a>
                     </li>

@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <h2> Dashboard</h2>
                     </header>
                     <!-- start: page -->
-                    <section class="panel">
+                    <section class="panel" style="box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 col-xl-4">
@@ -63,7 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <div class="col-md-9 col-xl-12">
                                             <section class="panel">
                                                 <header class="panel-heading center">
-                                                    <h2 class="panel-title">Jumlah Transaksi Penjualan 2 Minggu Terakhir</h2>
+                                                    <h2 class="panel-title">Total Penjualan 2 Minggu Terakhir</h2>
                                                 </header>
                                                 <div class="panel-body">
                                                     <div class="chart chart-md" id="GrafikPenjualan"></div>
@@ -72,7 +72,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         </div>
                                         <div class="col-md-3 col-xl-12">
                                             <section class="panel">
-                                                <div class="panel-body bg-primary">
+                                                <div class="panel-body" style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                                                     <div class="widget-summary">
                                                         <div class="widget-summary-col">
                                                             <div class="summary">
@@ -86,7 +86,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 </div>
                                             </section>
                                             <section class="panel">
-                                                <div class="panel-body bg-primary">
+                                                <div class="panel-body" style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                                                     <div class="widget-summary">
                                                         <div class="widget-summary-col">
                                                             <div class="summary">
@@ -100,7 +100,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 </div>
                                             </section>
                                             <section class="panel">
-                                                <div class="panel-body bg-primary">
+                                                <div class="panel-body" style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                                                     <div class="widget-summary">
                                                         <div class="widget-summary-col">
                                                             <div class="summary">
@@ -114,7 +114,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 </div>
                                             </section>
                                             <section class="panel">
-                                                <div class="panel-body bg-primary">
+                                                <div class="panel-body" style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                                                     <div class="widget-summary">
                                                         <div class="widget-summary-col">
                                                             <div class="summary">
@@ -134,7 +134,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                     </section>
 
-                    <section class="panel">
+                    <section class="panel" style="box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                         <div class="panel-body">
 
                             <div class="row">
@@ -142,7 +142,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="row">
                                         <div class="col-md-3 col-xl-12">
                                             <section class="panel">
-                                                <div class="panel-body bg-primary">
+                                                <div class="panel-body" style="background-color:#05bcf3; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                                                     <div class="widget-summary">
                                                         <div class="widget-summary-col">
                                                             <div class="summary">
@@ -158,7 +158,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         </div>
                                         <div class="col-md-3 col-xl-12">
                                             <section class="panel">
-                                                <div class="panel-body bg-primary">
+                                                <div class="panel-body" style="background-color:#05bcf3; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                                                     <div class="widget-summary">
                                                         <div class="widget-summary-col">
                                                             <div class="summary">
@@ -174,7 +174,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         </div>
                                         <div class="col-md-3 col-xl-12">
                                             <section class="panel">
-                                                <div class="panel-body bg-primary">
+                                                <div class="panel-body" style="background-color:#05bcf3; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                                                     <div class="widget-summary">
                                                         <div class="widget-summary-col">
                                                             <div class="summary">
@@ -190,7 +190,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         </div>
                                         <div class="col-md-3 col-xl-12">
                                             <section class="panel">
-                                                <div class="panel-body bg-primary">
+                                                <div class="panel-body" style="background-color:#05bcf3; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                                                     <div class="widget-summary">
                                                         <div class="widget-summary-col">
                                                             <div class="summary">
@@ -239,7 +239,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="row">
                                         <div class="col-md-6 col-xl-12">
                                             <section class="panel">
-                                                <div class="panel-body bg-primary">
+                                                <div class="panel-body" style="background-color:#abdd12">
                                                     <div class="widget-summary">
                                                         <div class="widget-summary-col">
                                                             <div class="summary">
@@ -257,7 +257,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         </div>
                                         <div class="col-md-6 col-xl-12">
                                             <section class="panel">
-                                                <div class="panel-body bg-primary">
+                                                <div class="panel-body" style="background-color:#abdd12">
                                                     <div class="widget-summary">
                                                         <div class="widget-summary-col">
                                                             <div class="summary">
@@ -277,7 +277,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="row">
                                         <div class="col-md-6 col-xl-12">
                                             <section class="panel">
-                                                <div class="panel-body bg-primary">
+                                                <div class="panel-body" style="background-color:#abdd12">
                                                     <div class="widget-summary">
                                                         <div class="widget-summary-col">
                                                             <div class="summary">
@@ -295,7 +295,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         </div>
                                         <div class="col-md-6 col-xl-12">
                                             <section class="panel">
-                                                <div class="panel-body bg-primary">
+                                                <div class="panel-body" style="background-color:#abdd12">
                                                     <div class="widget-summary">
                                                         <div class="widget-summary-col">
                                                             <div class="summary">
