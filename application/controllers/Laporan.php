@@ -79,7 +79,7 @@ class Laporan extends CI_Controller {
         $conditions['kategori']['excel'] = "excel"; 
         $postdata = $this->laporan_model->getrowspo($conditions); 
 
-        $spreadsheet->getProperties()->setCreator(' Panjaitan')
+        $spreadsheet->getProperties()->setCreator(' Masruhin')
         ->setLastModifiedBy('Masruhin')
         ->setTitle('Laporan Format Excel')
         ->setSubject('Laporan Format Excel');
