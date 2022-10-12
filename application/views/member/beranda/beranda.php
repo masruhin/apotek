@@ -62,12 +62,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="row">
                                         <div class="col-md-9 col-xl-12">
                                             <section class="panel">
-                                                <header class="panel-heading center">
-                                                    <h2 class="panel-title">Total Penjualan 2 Minggu Terakhir</h2>
-                                                </header>
                                                 <div class="panel-body">
                                                     <div class="chart chart-md" id="GrafikPenjualan"></div>
                                                 </div>
+                                                <footer class="panel-heading center">
+                                                    <h2 class="panel-title">Total Penjualan 2 Minggu Terakhir</h2>
+                                                </footer>
                                             </section>
                                         </div>
                                         <div class="col-md-3 col-xl-12">
@@ -211,19 +211,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                     </section>
 
-                    <section class="panel">
+                    <section class="panel" style="box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4);">
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-9 col-lg-12 col-xl-4">
                                     <div class="row">
                                         <div class="col-md-12 col-xl-12">
                                             <section class="panel">
-                                                <header class="panel-heading">
-                                                    <h2 class="panel-title">Pemasukan dan Pengeluaran 2 Minggu Terakhir</h2>
-                                                </header>
                                                 <div class="panel-body">
                                                     <div class="chart chart-md" id="GrafikCash"></div>
                                                 </div>
+                                                <header class="panel-heading center">
+                                                    <h2 class="panel-title">Pemasukan dan Pengeluaran 2 Minggu Terakhir</h2>
+                                                </header>
                                             </section>
                                         </div>
                                     </div>
@@ -317,7 +317,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <div class="col-md-7">
                             <section class="panel">
-                                <header class="panel-heading">
+                                <header class="panel-heading center">
                                     <h2 class="panel-title">Produk Terlaris</h2>
                                 </header>
                                 <div class="panel-body">
