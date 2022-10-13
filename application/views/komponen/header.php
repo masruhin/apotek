@@ -18,8 +18,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
   <div class="header-right">
     <ul class="notifications">
       <li>
-        <a href="<?php echo base_url() ?>penjualan/kasir" type="button" class="mb-xs mt-xs mr-xs btn btn-primary"><i
-            class="fa  fa-shopping-cart"></i> Menu Kasir</a>
+        <a href="<?php echo base_url() ?>penjualan/kasir" type="button" class="mb-xs mt-xs mr-xs btn btn-primary"
+          style="background-color:#0dbdb5 ;">
+          <i class="fa  fa-shopping-cart">
+          </i> Menu Kasir
+        </a>
       </li>
     </ul>
 

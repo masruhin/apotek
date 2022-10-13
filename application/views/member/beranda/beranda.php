@@ -249,47 +249,29 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
           <div class="row">
             <div class="col-md-12">
-
-              <section class="panel">
-                <div class="panel-body"
-                  style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
-                  <div class="widget-summary">
-                    <div class="widget-summary-col widget-summary-col-icon sm">
-                      <div class="summary-icon bg-default" style="color:#000 ;">
-                        <img src="<?php echo base_url() ?>/assets/images/icons/wallet.png" style="height:50px; width:50"
-                          alt="">
-                      </div>
-                    </div>
-                    <div class="widget-summary-col">
-                      <div class="summary">
-                        <h4 class="title">Total Penjualan Hari Ini</h4>
-                        <div class="info">
-                          <strong class="amount" id="penjualan_hari_ini"></strong>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-
               <section class="panel" style="box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                 <div class="panel-body">
                   <div class="row">
                     <div class="col-md-12 col-lg-12 col-xl-4">
                       <div class="row">
-                        <div class="col-md-3 col-xl-12">
+                        <div class="col-md-6 col-xl-12">
                           <section class="panel">
                             <div class="panel-body"
-                              style="background-color:#05bcf3; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
+                              style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                               <div class="widget-summary">
+                                <div class="widget-summary-col widget-summary-col-icon">
+                                  <div class="summary-icon bg-default" style="color:#000;">
+                                    <img src="<?php echo base_url() ?>/assets/images/icons/buy.png"
+                                      style="height:50px; width:50" alt="">
+                                  </div>
+                                </div>
                                 <div class="widget-summary-col">
                                   <div class="summary">
-                                    <h4 class="title">
-                                      Jumlah Purchase Order
-                                    </h4>
+                                    <h6 class="title">
+                                      Jumlah PO
+                                    </h6>
                                     <div class="info">
-                                      <strong class="amount" id="total_po"></strong>
+                                      <strong class=" amount" id="total_po"></strong>
                                     </div>
                                   </div>
                                 </div>
@@ -297,16 +279,22 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </div>
                           </section>
                         </div>
-                        <div class="col-md-3 col-xl-12">
+                        <div class="col-md-6 col-xl-12">
                           <section class="panel">
                             <div class="panel-body"
-                              style="background-color:#05bcf3; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
+                              style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                               <div class="widget-summary">
+                                <div class="widget-summary-col widget-summary-col-icon">
+                                  <div class="summary-icon bg-default" style="color:#000;">
+                                    <img src="<?php echo base_url() ?>/assets/images/icons/buys.png"
+                                      style="height:50px; width:50" alt="">
+                                  </div>
+                                </div>
                                 <div class="widget-summary-col">
                                   <div class="summary">
-                                    <h4 class="title">
+                                    <h6 class="title">
                                       Jumlah Pembelian
-                                    </h4>
+                                    </h6>
                                     <div class="info">
                                       <strong class="amount" id="total_pembelian"></strong>
                                     </div>
@@ -316,16 +304,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </div>
                           </section>
                         </div>
-                        <div class="col-md-3 col-xl-12">
+                        <div class="col-md-6 col-xl-12">
+
                           <section class="panel">
                             <div class="panel-body"
-                              style="background-color:#05bcf3; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
+                              style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                               <div class="widget-summary">
+                                <div class="widget-summary-col widget-summary-col-icon">
+                                  <div class="summary-icon bg-default" style="color:#000;">
+                                    <img src="<?php echo base_url() ?>/assets/images/icons/masuk.png"
+                                      style="height:50px; width:50" alt="">
+                                  </div>
+                                </div>
                                 <div class="widget-summary-col">
                                   <div class="summary">
-                                    <h4 class="title">
+                                    <h6 class="title">
                                       Jumlah Penerimaan
-                                    </h4>
+                                    </h6>
                                     <div class="info">
                                       <strong class="amount" id="total_penerimaan"></strong>
                                     </div>
@@ -335,16 +330,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </div>
                           </section>
                         </div>
-                        <div class="col-md-3 col-xl-12">
+                        <div class="col-md-6 col-xl-12">
+
                           <section class="panel">
                             <div class="panel-body"
-                              style="background-color:#05bcf3; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
+                              style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                               <div class="widget-summary">
+                                <div class="widget-summary-col widget-summary-col-icon">
+                                  <div class="summary-icon bg-default" style="color:#000;">
+                                    <img src="<?php echo base_url() ?>/assets/images/icons/reject.png"
+                                      style="height:50px; width:50" alt="">
+                                  </div>
+                                </div>
                                 <div class="widget-summary-col">
                                   <div class="summary">
-                                    <h4 class="title">
+                                    <h6 class="title">
                                       Jumlah Retur Pembelian
-                                    </h4>
+                                    </h6>
                                     <div class="info">
                                       <strong class="amount" id="total_retur"></strong>
                                     </div>
@@ -444,49 +446,55 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </div>
               </section> -->
             </div>
-            <div class="col-md-7">
-              <section class="panel">
-                <header class="panel-heading center">
-                  <h2 class="panel-title">Produk Terlaris</h2>
-                </header>
-                <div class="panel-body">
-                  <div class="table-responsive">
-                    <table class="table table-bordered table-striped table-condensed mb-none" id="produk_terlaris">
-                      <thead>
-                        <tr>
-                          <th>No</th>
-                          <th>Kode Item</th>
-                          <th>Nama Produk</th>
-                          <th>Total Terjual</th>
-                        </tr>
-                      </thead>
-                      <tbody></tbody>
-                    </table>
+            <!-- <div class="col-md-12">
+              <div class="col-md-6">
+                <section class="panel">
+                  <header class="panel-heading center">
+                    <h2 class="panel-title">Produk Terlaris</h2>
+                  </header>
+                  <div class="panel-body">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-striped table-condensed mb-none" id="produk_terlaris">
+                        <thead>
+                          <tr>
+                            <th>No</th>
+                            <th>Kode Item</th>
+                            <th>Nama Produk</th>
+                            <th>Total Terjual</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
                   </div>
-                </div>
-              </section>
-              <section class="panel">
-                <header class="panel-heading center">
-                  <h2 class="panel-title">Produk akan Kadaluarsa</h2>
-                </header>
-                <div class="panel-body">
-                  <div class="table-responsive">
-                    <table class="table table-bordered table-striped table-condensed mb-none" id="kadaluarsa">
-                      <thead>
-                        <tr>
-                          <th>No</th>
-                          <th>Kode Item</th>
-                          <th>Nama Produk</th>
-                          <th>Tanggal Kadaluarsa</th>
-                        </tr>
-                      </thead>
-                      <tbody></tbody>
-                    </table>
+                </section>
+              </div>
+
+              <div class="col-md-6">
+                <section class="panel">
+                  <header class="panel-heading center">
+                    <h2 class="panel-title">Produk akan Kadaluarsa</h2>
+                  </header>
+                  <div class="panel-body">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-striped table-condensed mb-none" id="kadaluarsa">
+                        <thead>
+                          <tr>
+                            <th>No</th>
+                            <th>Kode Item</th>
+                            <th>Nama Produk</th>
+                            <th>Tanggal Kadaluarsa</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
                   </div>
-                </div>
-              </section>
-            </div>
+                </section>
+              </div>
+            </div> -->
           </div>
+
           <!-- end: page -->
         </section>
       </div>
@@ -553,7 +561,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
           ],
           hideHover: true,
           lineColors: [
-            '#0088cc', '#734ba9'
+            '#91bf06', '#bd2d0d'
           ],
           xLabelFormat: function(d) {
             return ("0" + d.getDate()).slice(-2) + '-' + (
