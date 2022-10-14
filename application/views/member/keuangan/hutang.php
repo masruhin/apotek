@@ -122,7 +122,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 <h2 class="panel-title">Data Hutang</h2>
                             </div>
                             <?php
-                            echo level_user('keuangan', 'hutang', $this->session->userdata('kategori'), 'add') > 0 ? '<div class="col-md-6" align="right"><a class="btn btn-success" href="#"  data-toggle="modal" data-target="#tambahData"><i class="fa fa-plus"></i> Tambah</a></div>' : '';
+                            echo level_user('keuangan', 'hutang', $this->session->userdata('kategori'), 'add') > 0 ? '<div class="col-md-6" align="right"><a class="btn btn-primary" href="#"  data-toggle="modal" data-target="#tambahData"><i class="fa fa-plus"></i> Tambah</a></div>' : '';
                             ?>
                         </div>
                     </header>

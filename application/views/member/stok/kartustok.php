@@ -94,7 +94,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                                 <input type="hidden" id="htmlStartDate" name="startdate" value='<?php echo date('Y-m-d'); ?>'>
                                                 <input type="hidden" id="htmlEndDate" name="enddate" value='<?php echo date('Y-m-d'); ?>'>
                                                 <input type="hidden" id="idd_html" name="idd">
-                                                <button class="btn btn-success" type="submit"><i class="fa fa-print"></i> Tampilkan HTML</button>
+                                                <button class="btn btn-primary" type="submit"><i class="fa fa-print"></i> Tampilkan HTML</button>
                                                 </form>
                                             </td>
                                             <td>

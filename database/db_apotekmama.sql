@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 05, 2019 at 06:24 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.0
+-- Waktu pembuatan: 14 Okt 2022 pada 09.47
+-- Versi server: 10.4.19-MariaDB
+-- Versi PHP: 8.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cash_in_out`
+-- Struktur dari tabel `cash_in_out`
 --
 
 CREATE TABLE `cash_in_out` (
@@ -41,7 +40,7 @@ CREATE TABLE `cash_in_out` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `cash_in_out`
+-- Dumping data untuk tabel `cash_in_out`
 --
 
 INSERT INTO `cash_in_out` (`id`, `kode_rekening`, `tanggal`, `masuk`, `keluar`, `id_hutang_dibayar`, `id_piutang_dibayar`, `id_penjualan`, `keterangan`) VALUES
@@ -57,12 +56,33 @@ INSERT INTO `cash_in_out` (`id`, `kode_rekening`, `tanggal`, `masuk`, `keluar`, 
 (41, '10001', '2019-06-30', '21000', '0', NULL, NULL, '300619000004', ''),
 (42, '10001', '2019-06-30', '116000', '0', NULL, NULL, '300619000005', ''),
 (43, '10001', '2019-07-05', '21000', '0', NULL, NULL, '050719000006', ''),
-(44, '10001', '2019-07-05', '220000', '0', NULL, NULL, '050719000007', '');
+(44, '10001', '2019-07-05', '220000', '0', NULL, NULL, '050719000007', ''),
+(45, '10001', '2022-10-11', '24000', '0', NULL, NULL, '111022000008', ''),
+(46, '10001', '2022-10-11', '57000', '0', NULL, NULL, '111022000009', ''),
+(47, '10001', '2022-10-11', '57000', '0', NULL, NULL, '111022000010', ''),
+(48, '10001', '2022-10-11', '54000', '0', NULL, NULL, '111022000011', ''),
+(49, '10001', '2022-10-11', '54000', '0', NULL, NULL, '111022000012', ''),
+(50, '10001', '2022-10-11', '57000', '0', NULL, NULL, '111022000013', ''),
+(51, '10001', '2022-10-11', '57000', '0', NULL, NULL, '111022000014', ''),
+(52, '10001', '2022-10-11', '57000', '0', NULL, NULL, '111022000015', ''),
+(53, '10001', '2022-10-11', '68000', '0', NULL, NULL, '111022000016', ''),
+(54, '10001', '2022-10-11', '68000', '0', NULL, NULL, '111022000017', ''),
+(55, '10001', '2022-10-11', '68000', '0', NULL, NULL, '111022000018', ''),
+(56, '10001', '2022-10-11', '150000', '0', NULL, NULL, '111022000019', ''),
+(57, '10001', '2022-10-11', '150000', '0', NULL, NULL, '111022000020', ''),
+(58, '10001', '2022-10-11', '54000', '0', NULL, NULL, '111022000021', ''),
+(59, '10001', '2022-10-11', '54000', '0', NULL, NULL, '111022000022', ''),
+(60, '10001', '2022-10-11', '54000', '0', NULL, NULL, '111022000023', ''),
+(61, '10001', '2022-10-11', '54000', '0', NULL, NULL, '111022000024', ''),
+(62, '10001', '2022-10-11', '54000', '0', NULL, NULL, '111022000025', ''),
+(63, '10001', '2022-10-11', '150000', '0', NULL, NULL, '111022000026', ''),
+(64, '10001', '2022-10-11', '150000', '0', NULL, NULL, '111022000027', ''),
+(65, '10001', '2022-10-11', '150000', '0', NULL, NULL, '111022000028', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hutang_dibayar_history`
+-- Struktur dari tabel `hutang_dibayar_history`
 --
 
 CREATE TABLE `hutang_dibayar_history` (
@@ -71,13 +91,13 @@ CREATE TABLE `hutang_dibayar_history` (
   `id_hutang` int(11) NOT NULL,
   `tanggal` date NOT NULL,
   `nominal` decimal(10,0) NOT NULL,
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hutang_history`
+-- Struktur dari tabel `hutang_history`
 --
 
 CREATE TABLE `hutang_history` (
@@ -91,12 +111,12 @@ CREATE TABLE `hutang_history` (
   `tanggal_lunas` date NOT NULL,
   `tanggal_jatuh_tempo` date NOT NULL,
   `sudah_lunas` enum('0','1') NOT NULL DEFAULT '0',
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `keterangan` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `hutang_history`
+-- Dumping data untuk tabel `hutang_history`
 --
 
 INSERT INTO `hutang_history` (`id`, `judul`, `tanggal`, `nominal`, `nominal_dibayar`, `nomor_faktur`, `id_supplier`, `tanggal_lunas`, `tanggal_jatuh_tempo`, `sudah_lunas`, `waktu_update`, `keterangan`) VALUES
@@ -113,7 +133,7 @@ INSERT INTO `hutang_history` (`id`, `judul`, `tanggal`, `nominal`, `nominal_diba
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kartu_stok`
+-- Struktur dari tabel `kartu_stok`
 --
 
 CREATE TABLE `kartu_stok` (
@@ -133,7 +153,7 @@ CREATE TABLE `kartu_stok` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kartu_stok`
+-- Dumping data untuk tabel `kartu_stok`
 --
 
 INSERT INTO `kartu_stok` (`id`, `nomor_rec_penerimaan`, `id_stok_adjustment`, `id_stok_opname`, `id_stok_keluar`, `id_penjualan`, `kode_item`, `tanggal`, `jenis_transaksi`, `jumlah_masuk`, `jumlah_keluar`, `satuan_kecil`, `tgl_expired`) VALUES
@@ -177,12 +197,44 @@ INSERT INTO `kartu_stok` (`id`, `nomor_rec_penerimaan`, `id_stok_adjustment`, `i
 (78, NULL, NULL, NULL, NULL, '050719000006', '8999909028238', '2019-07-05', 'penjualan', 0, 1, 'Botol', '2025-04-22'),
 (79, NULL, NULL, NULL, NULL, '050719000006', '8999909028239', '2019-07-05', 'penjualan', 0, 1, 'Botol', '2025-04-22'),
 (80, NULL, NULL, NULL, NULL, '050719000007', '8999909028236', '2019-07-05', 'penjualan', 0, 1, 'Botol', '2025-04-22'),
-(81, NULL, NULL, NULL, NULL, '050719000007', '8999909028237', '2019-07-05', 'penjualan', 0, 1, 'Box', '2025-04-22');
+(81, NULL, NULL, NULL, NULL, '050719000007', '8999909028237', '2019-07-05', 'penjualan', 0, 1, 'Box', '2025-04-22'),
+(82, NULL, NULL, NULL, NULL, '111022000008', '8999909028239', '2022-10-11', 'penjualan', 0, 2, 'Botol', '2025-04-22'),
+(83, NULL, NULL, NULL, NULL, '111022000009', '8999909028216', '2022-10-11', 'penjualan', 0, 1, 'Botol', '2025-04-22'),
+(84, NULL, NULL, NULL, NULL, '111022000009', '8999909028239', '2022-10-11', 'penjualan', 0, 2, 'Botol', '2025-04-22'),
+(85, NULL, NULL, NULL, NULL, '111022000010', '8999909028216', '2022-10-11', 'penjualan', 0, 1, 'Botol', '2025-04-22'),
+(86, NULL, NULL, NULL, NULL, '111022000010', '8999909028239', '2022-10-11', 'penjualan', 0, 2, 'Botol', '2025-04-22'),
+(87, NULL, NULL, NULL, NULL, '111022000011', '8999909028234', '2022-10-11', 'penjualan', 0, 2, 'Botol', '2030-04-22'),
+(88, NULL, NULL, NULL, NULL, '111022000012', '8999909028234', '2022-10-11', 'penjualan', 0, 2, 'Botol', '2030-04-22'),
+(89, NULL, NULL, NULL, NULL, '111022000013', '8999909028216', '2022-10-11', 'penjualan', 0, 1, 'Botol', '2025-04-22'),
+(90, NULL, NULL, NULL, NULL, '111022000013', '8999909028239', '2022-10-11', 'penjualan', 0, 2, 'Botol', '2025-04-22'),
+(91, NULL, NULL, NULL, NULL, '111022000014', '8999909028216', '2022-10-11', 'penjualan', 0, 1, 'Botol', '2025-04-22'),
+(92, NULL, NULL, NULL, NULL, '111022000014', '8999909028239', '2022-10-11', 'penjualan', 0, 2, 'Botol', '2025-04-22'),
+(93, NULL, NULL, NULL, NULL, '111022000015', '8999909028216', '2022-10-11', 'penjualan', 0, 1, 'Botol', '2025-04-22'),
+(94, NULL, NULL, NULL, NULL, '111022000015', '8999909028239', '2022-10-11', 'penjualan', 0, 2, 'Botol', '2025-04-22'),
+(95, NULL, NULL, NULL, NULL, '111022000016', '8999909028238', '2022-10-11', 'penjualan', 0, 1, 'Botol', '2025-04-22'),
+(96, NULL, NULL, NULL, NULL, '111022000016', '8999909028216', '2022-10-11', 'penjualan', 0, 1, 'Botol', '2025-04-22'),
+(97, NULL, NULL, NULL, NULL, '111022000016', '8999909028239', '2022-10-11', 'penjualan', 0, 2, 'Botol', '2025-04-22'),
+(98, NULL, NULL, NULL, NULL, '111022000017', '8999909028238', '2022-10-11', 'penjualan', 0, 1, 'Botol', '2025-04-22'),
+(99, NULL, NULL, NULL, NULL, '111022000017', '8999909028216', '2022-10-11', 'penjualan', 0, 1, 'Botol', '2025-04-22'),
+(100, NULL, NULL, NULL, NULL, '111022000017', '8999909028239', '2022-10-11', 'penjualan', 0, 2, 'Botol', '2025-04-22'),
+(101, NULL, NULL, NULL, NULL, '111022000018', '8999909028238', '2022-10-11', 'penjualan', 0, 1, 'Botol', '2025-04-22'),
+(102, NULL, NULL, NULL, NULL, '111022000018', '8999909028216', '2022-10-11', 'penjualan', 0, 1, 'Botol', '2025-04-22'),
+(103, NULL, NULL, NULL, NULL, '111022000018', '8999909028239', '2022-10-11', 'penjualan', 0, 2, 'Botol', '2025-04-22'),
+(104, NULL, NULL, NULL, NULL, '111022000019', '8999909028237', '2022-10-11', 'penjualan', 0, 1, 'Box', '2025-04-22'),
+(105, NULL, NULL, NULL, NULL, '111022000020', '8999909028237', '2022-10-11', 'penjualan', 0, 1, 'Box', '2025-04-22'),
+(106, NULL, NULL, NULL, NULL, '111022000021', '8999909028234', '2022-10-11', 'penjualan', 0, 2, 'Botol', '2030-04-22'),
+(107, NULL, NULL, NULL, NULL, '111022000022', '8999909028234', '2022-10-11', 'penjualan', 0, 2, 'Botol', '2030-04-22'),
+(108, NULL, NULL, NULL, NULL, '111022000023', '8999909028234', '2022-10-11', 'penjualan', 0, 2, 'Botol', '2030-04-22'),
+(109, NULL, NULL, NULL, NULL, '111022000024', '8999909028234', '2022-10-11', 'penjualan', 0, 2, 'Botol', '2030-04-22'),
+(110, NULL, NULL, NULL, NULL, '111022000025', '8999909028234', '2022-10-11', 'penjualan', 0, 2, 'Botol', '2030-04-22'),
+(111, NULL, NULL, NULL, NULL, '111022000026', '8999909028237', '2022-10-11', 'penjualan', 0, 1, 'Box', '2025-04-22'),
+(112, NULL, NULL, NULL, NULL, '111022000027', '8999909028237', '2022-10-11', 'penjualan', 0, 1, 'Box', '2025-04-22'),
+(113, NULL, NULL, NULL, NULL, '111022000028', '8999909028237', '2022-10-11', 'penjualan', 0, 1, 'Box', '2025-04-22');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori_user`
+-- Struktur dari tabel `kategori_user`
 --
 
 CREATE TABLE `kategori_user` (
@@ -192,7 +244,7 @@ CREATE TABLE `kategori_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kategori_user`
+-- Dumping data untuk tabel `kategori_user`
 --
 
 INSERT INTO `kategori_user` (`id`, `kategori_user`, `beranda`) VALUES
@@ -202,7 +254,7 @@ INSERT INTO `kategori_user` (`id`, `kategori_user`, `beranda`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori_user_modul`
+-- Struktur dari tabel `kategori_user_modul`
 --
 
 CREATE TABLE `kategori_user_modul` (
@@ -213,7 +265,7 @@ CREATE TABLE `kategori_user_modul` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kategori_user_modul`
+-- Dumping data untuk tabel `kategori_user_modul`
 --
 
 INSERT INTO `kategori_user_modul` (`id`, `kategori_user`, `modul`, `akses`) VALUES
@@ -328,7 +380,7 @@ INSERT INTO `kategori_user_modul` (`id`, `kategori_user`, `modul`, `akses`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `keranjang`
+-- Struktur dari tabel `keranjang`
 --
 
 CREATE TABLE `keranjang` (
@@ -346,7 +398,7 @@ CREATE TABLE `keranjang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `keranjang`
+-- Dumping data untuk tabel `keranjang`
 --
 
 INSERT INTO `keranjang` (`id`, `token`, `tanggal_jam`, `id_admin`, `id_pembeli`, `total_upah_peracik`, `total_harga_item`, `total`, `hold`, `keterangan_hold`, `waktu_hold`) VALUES
@@ -357,12 +409,13 @@ INSERT INTO `keranjang` (`id`, `token`, `tanggal_jam`, `id_admin`, `id_pembeli`,
 (75, '982c1b7178f668d87e8cf3e21a072cb8', '2019-07-02 05:31:44', 1, NULL, '0', '10500', '10500', '0', '', ''),
 (76, '904fd9e8537785f5c73d403ffef24ee6', '2019-07-03 02:03:35', 1, 14, '0', '21000', '21000', '0', 'ddd', '1562094224'),
 (78, 'b1f95b98bf3941e3b3c07338a2cd6402', '2019-07-03 03:31:28', 1, NULL, '0', '0', '0', '0', '', ''),
-(79, '8f24b84bb00133ed237217cb89ae9805', '2019-07-03 10:03:52', 1, NULL, '0', '0', '0', '0', '', '');
+(79, '8f24b84bb00133ed237217cb89ae9805', '2019-07-03 10:03:52', 1, NULL, '0', '0', '0', '0', '', ''),
+(84, '3a9dea566836ce9213397075a2f7be66', '2022-10-11 09:43:30', 2, 14, '0', '54000', '54000', '0', '', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `keranjang_detail`
+-- Struktur dari tabel `keranjang_detail`
 --
 
 CREATE TABLE `keranjang_detail` (
@@ -378,7 +431,7 @@ CREATE TABLE `keranjang_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `keranjang_detail`
+-- Dumping data untuk tabel `keranjang_detail`
 --
 
 INSERT INTO `keranjang_detail` (`id`, `id_keranjang`, `kode_item`, `racikan`, `upah_peracik`, `harga`, `diskon`, `kuantiti`, `total`) VALUES
@@ -395,12 +448,13 @@ INSERT INTO `keranjang_detail` (`id`, `id_keranjang`, `kode_item`, `racikan`, `u
 (34, 74, '8999909028212', '1', '5000', '11000', '0', 1, '11000'),
 (35, 75, '8999909028239', '0', '0', '12000', '1500', 1, '10500'),
 (36, 76, '8999909028239', '0', '0', '12000', '1500', 1, '10500'),
-(37, 76, '8999909028238', '0', '0', '11000', '500', 1, '10500');
+(37, 76, '8999909028238', '0', '0', '11000', '500', 1, '10500'),
+(46, 84, '8999909028234', '0', '0', '27000', '0', 2, '54000');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_admin`
+-- Struktur dari tabel `master_admin`
 --
 
 CREATE TABLE `master_admin` (
@@ -415,32 +469,32 @@ CREATE TABLE `master_admin` (
   `handphone` varchar(30) NOT NULL,
   `email` varchar(100) NOT NULL,
   `aktif` enum('0','1') NOT NULL DEFAULT '1',
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `master_admin`
+-- Dumping data untuk tabel `master_admin`
 --
 
 INSERT INTO `master_admin` (`id`, `kategori`, `username`, `password`, `nama_admin`, `jenis_kelamin`, `alamat`, `telepon`, `handphone`, `email`, `aktif`, `waktu_update`) VALUES
-(1, 31, 'user_manager', '$2y$10$Lx.8tA1OSU7tGWHJ5AmhguU72L7WDnzgX2r.VJTRpC8cAVCIRUgQq', 'Paber', 'laki-laki', 'Jln pepaya no 12 Bali', '', '082139221343', 'paber@gmail.com', '1', '2019-07-05 04:24:04'),
+(1, 31, 'user_manager', '$2y$10$SV4g43qgjN1dtZMmSasjQuH06PvNvKs6D/4EtL/aE16riZVA2Ziwm', 'Masruhin', 'laki-laki', 'Kalisapu Slawi', '', '082139221343', 'masruhin15201029@gmail.com', '1', '2022-10-13 07:31:54'),
 (2, 32, 'user_kasir', '$2y$10$l1yNDeXjOcFP5jUAvp/be.C4aiC4J.5kwr26wiupnzbkduT4IKe3y', 'Andika', 'laki-laki', 'Jalan kelapa muda no 21', '', '082183439921', 'andika@gmail.com', '1', '2019-07-05 04:24:09');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_bank`
+-- Struktur dari tabel `master_bank`
 --
 
 CREATE TABLE `master_bank` (
   `singkatan` varchar(30) NOT NULL,
   `nama_bank` varchar(100) NOT NULL,
   `jenis` enum('credit card','debet') NOT NULL DEFAULT 'debet',
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `master_bank`
+-- Dumping data untuk tabel `master_bank`
 --
 
 INSERT INTO `master_bank` (`singkatan`, `nama_bank`, `jenis`, `waktu_update`) VALUES
@@ -456,7 +510,7 @@ INSERT INTO `master_bank` (`singkatan`, `nama_bank`, `jenis`, `waktu_update`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_diskon_kelipatan`
+-- Struktur dari tabel `master_diskon_kelipatan`
 --
 
 CREATE TABLE `master_diskon_kelipatan` (
@@ -465,11 +519,11 @@ CREATE TABLE `master_diskon_kelipatan` (
   `min_kuantiti` int(2) NOT NULL,
   `diskon` decimal(10,0) NOT NULL,
   `tanggal_berakhir` date NOT NULL,
-  `waktu_update_diskon` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `waktu_update_diskon` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `master_diskon_kelipatan`
+-- Dumping data untuk tabel `master_diskon_kelipatan`
 --
 
 INSERT INTO `master_diskon_kelipatan` (`id`, `kode_item`, `min_kuantiti`, `diskon`, `tanggal_berakhir`, `waktu_update_diskon`) VALUES
@@ -479,7 +533,7 @@ INSERT INTO `master_diskon_kelipatan` (`id`, `kode_item`, `min_kuantiti`, `disko
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_dokter`
+-- Struktur dari tabel `master_dokter`
 --
 
 CREATE TABLE `master_dokter` (
@@ -489,11 +543,11 @@ CREATE TABLE `master_dokter` (
   `telepon` varchar(30) NOT NULL,
   `handphone` varchar(30) NOT NULL,
   `jenis_kelamin` enum('laki-laki','perempuan') NOT NULL DEFAULT 'laki-laki',
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `master_dokter`
+-- Dumping data untuk tabel `master_dokter`
 --
 
 INSERT INTO `master_dokter` (`kode_dokter`, `nama_dokter`, `alamat`, `telepon`, `handphone`, `jenis_kelamin`, `waktu_update`) VALUES
@@ -503,7 +557,7 @@ INSERT INTO `master_dokter` (`kode_dokter`, `nama_dokter`, `alamat`, `telepon`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_item`
+-- Struktur dari tabel `master_item`
 --
 
 CREATE TABLE `master_item` (
@@ -517,14 +571,14 @@ CREATE TABLE `master_item` (
   `lokasi` varchar(100) NOT NULL,
   `gambar` varchar(200) NOT NULL DEFAULT 'default.jpg',
   `harga_jual` decimal(10,0) NOT NULL,
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `upah_peracik` decimal(10,0) NOT NULL,
   `aturan_pakai` varchar(100) NOT NULL,
   `stok` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `master_item`
+-- Dumping data untuk tabel `master_item`
 --
 
 INSERT INTO `master_item` (`kode_item`, `jenis`, `kategori`, `satuan`, `merk`, `nama_item`, `keterangan`, `lokasi`, `gambar`, `harga_jual`, `waktu_update`, `upah_peracik`, `aturan_pakai`, `stok`) VALUES
@@ -532,7 +586,7 @@ INSERT INTO `master_item` (`kode_item`, `jenis`, `kategori`, `satuan`, `merk`, `
 ('8999909028213', 'obat', 'Herbal', 'Botol', 'Acne', 'AFI SALEP 15 GRAM', 'Digunakan untuk mengobati kudis, koreng dan gatal-gata', 'Rak B', '8999909028213.jpg', '5000', '2019-06-29 17:16:05', '0', '', 1997),
 ('8999909028214', 'obat', 'Herbal', 'Box', 'Bintang Toedjo', 'PAGODA SALEP EXTRA 10G', 'Pagoda Salep Extra adalah obat kulit topikal yang dapat memenuhi semua kriteria Dermatoterapeutika, yaitu pengobatan penyakit kulit di mana selain zat aktifnya juga bahan pembantu sebagai anti bakteri, antijamur, keratolitik dan antipruriginosa di mana bentuk sediaan dan cara aplikasinya sangat berperan dalam kecepatan kesembuhan penyakit kulit ini.', 'Rak B', '8999909028214.jpg', '6000', '2019-06-29 17:16:05', '0', '', 1197),
 ('8999909028215', 'obat', 'Herbal', 'Tube', 'Ambeven', 'BETASON KRIM 5 GRAM', 'Obat kulit yang berfungsi untuk meredakan peradangan kulit yang disebabkan oleh mikroorganisme, eksema, psoriasis, dan alergi.', 'Rak B', '8999909028215.jpg', '9000', '2019-06-23 16:37:06', '0', '', 800),
-('8999909028216', 'obat', 'Herbal', 'Botol', 'Ambeven', 'ABIXA 10 MG TABLET', 'Abixa mengandung Memantine Hydrochloride yang digunakan untuk membantu mengobati demensia pada pasien alzheimer', 'Rak B', '8999909028216.jpg', '33000', '2019-06-30 08:40:56', '0', '', 2498),
+('8999909028216', 'obat', 'Herbal', 'Botol', 'Ambeven', 'ABIXA 10 MG TABLET', 'Abixa mengandung Memantine Hydrochloride yang digunakan untuk membantu mengobati demensia pada pasien alzheimer', 'Rak B', '8999909028216.jpg', '33000', '2022-10-11 03:29:07', '0', '', 2490),
 ('8999909028217', 'obat', 'Herbal', 'Botol', 'Acne', 'ABBOTIC XL 500 MG TABLET', 'Mengandung clarithromycin/klaritomisin digunakan untuk mengobati infeksi yang disebabkan oleh bakteri terutama pada saluran pernapasan, kulit dan telinga . Selain itu, kombinasi dengan obat lain digunakan untuk mengobati gangguan pada lambung yang disebabkan oleh bakteri Helicobacter pylori.', 'Rak B', '8999909028217.jpg', '50000', '2019-07-04 12:15:30', '0', '', 999),
 ('8999909028218', 'obat', 'Herbal', 'Tablet', 'Acne', 'A-B VASK 10 MG BOX 100 TABLET', 'Untuk pengobatan hipertensi (tekanan darah tinggi), angina stabil kronik, pengobatan pasien yang pasti atau diduga menderita angina vasospastik (angina varian)', 'Rak B', '8999909028218.jpg', '350000', '2019-06-13 15:33:03', '0', '', 2000),
 ('8999909028219', 'obat', 'Obat', 'Tablet', 'Bintang Toedjo', '3TC-HBV 100 MG TABLET', 'Mengandung lamivudin untuk mengobati infeksi hepatitis B kronik dengan bukti adanya replikasi virus hepatitis B', 'Rak B', '8999909028219.jpg', '18000', '2019-06-13 15:33:03', '0', '', 10000),
@@ -550,26 +604,26 @@ INSERT INTO `master_item` (`kode_item`, `jenis`, `kategori`, `satuan`, `merk`, `
 ('8999909028231', 'obat', 'Herbal', 'Botol', 'Bintang Toedjo', 'BIO GOLD GAMAT EMAS 350 GRAM', 'Bio Gold Gamat merupakan suplemen yang berasal dari teripang dan berfungsi untuk memelihara kesehatan tubuh.', 'Rak A', '8999909028231.jpg', '160000', '2019-06-13 15:35:29', '0', '', 2000),
 ('8999909028232', 'obat', 'Herbal', 'Botol', 'Bintang Toedjo', 'BINTANG TOEDJOE MASUK ANGIN PLUS 4 TUBE', 'Bintang toedjoe masuk angin plus membantu meredakan masuk angin, pegal-pegal dan demam', 'Rak A', '8999909028232.jpg', '8000', '2019-06-29 16:42:07', '0', '', 2498),
 ('8999909028233', 'obat', 'Herbal', 'Botol', 'Ambeven', 'BALPIRIK BALSEM GOSOK EXTRA KUAT HIJAU 20 GRAM', 'Balpirik berbentuk balsem yang sangat cocok digunakan untuk meringankan berbagai gejala penyakit dan kondisi seperti penyakit flu (hidung tersumbat, bersin-bersin, pusing, sakit kepala), perut kembung karena masuk angin, mabuk perjalanan, gatal-gatal akibat gigitan serangga, pegal-pegal, encok dan kram otot.', 'Rak A', '8999909028233.jpg', '7000', '2019-06-29 18:42:20', '0', '', 4997),
-('8999909028234', 'obat', 'Herbal', 'Botol', 'Cussons', 'Cussons Baby Telon Oil Plus 60 Ml', 'Memberikan perlindungan 8 jam non stop terhadap gigitan nyamuk (tanpa harus dipakai ulang), karena kombinasi bahan alami pilihan yang telah dipercaya mampu mencegah gigitan nyamuk, sehingga tidak saja aman dan nyaman bagi si kecil namun untuk seluruh keluarga.', 'Rak A', '8999909028234.jpg', '27000', '2019-06-29 17:06:47', '0', '', 3995),
+('8999909028234', 'obat', 'Herbal', 'Botol', 'Cussons', 'Cussons Baby Telon Oil Plus 60 Ml', 'Memberikan perlindungan 8 jam non stop terhadap gigitan nyamuk (tanpa harus dipakai ulang), karena kombinasi bahan alami pilihan yang telah dipercaya mampu mencegah gigitan nyamuk, sehingga tidak saja aman dan nyaman bagi si kecil namun untuk seluruh keluarga.', 'Rak A', '8999909028234.jpg', '27000', '2022-10-11 04:51:28', '0', '', 3981),
 ('8999909028235', 'obat', 'Herbal', 'Botol', 'Cussons', 'AIR MANCUR PARCOK 75 ML', 'Membantu meredakan nyeri otot, persendian, dan pegal linu.', 'Rak A', '8999909028235.jpg', '15000', '2019-06-29 17:06:47', '0', '', 2997),
 ('8999909028236', 'obat', 'Herbal', 'Botol', 'Cussons', 'ALBIBET ALBIRUNI BOX 50 KAPSUL', 'Albibet albiruni adalah ramuan herbal asli indonesia yang telah teruji secara klinis dapat mengatasi kencing manis', 'Rak A', '8999909028236.jpg', '70000', '2019-07-05 04:19:49', '0', '', 10007),
-('8999909028237', 'obat', 'Herbal', 'Box', 'Ambeven', 'AMBEVEN BOX 100 KAPSUL', 'Ambeven merupakan obat tradisional dengan ramuan campuran dari bahan tanaman terpilih dan bermutu. Ambeven selain mengandung bahan aktif daun handeulum, juga mengandung bahan tradisional lainnya yang bermanfaat untuk mengatasi gejala-gejala yang menyertai wasir.', 'Rak A', '8999909028237.jpg', '150000', '2019-07-05 04:19:49', '0', '', 9990),
-('8999909028238', 'obat', 'Herbal', 'Botol', 'Cussons', 'APRICOT SYRUP 100 ML', 'Apricot merupakan sirup segar berkhasiat untuk meredakan batuk', 'Rak A', '8999909028238.jpg', '11000', '2019-07-05 04:15:08', '0', '', 9988),
-('8999909028239', 'obat', 'Herbal', 'Botol', 'Ambeven', 'BALJITOT MINYAK GOSOK 50 ML', 'Baljitot merupakan brand minyak gosok yang sebenarnya adalah singkatan dari balur dan pijat otot. Baljitot minyak gosok ini diformulasi dengan jahe merah yang akan memberikan kehangatan lebih lama dan aroma yang memberikan relaksasi.', 'Rak A', '8999909028239.jpg', '12000', '2019-07-05 04:15:08', '0', '', 9989);
+('8999909028237', 'obat', 'Herbal', 'Box', 'Ambeven', 'AMBEVEN BOX 100 KAPSUL', 'Ambeven merupakan obat tradisional dengan ramuan campuran dari bahan tanaman terpilih dan bermutu. Ambeven selain mengandung bahan aktif daun handeulum, juga mengandung bahan tradisional lainnya yang bermanfaat untuk mengatasi gejala-gejala yang menyertai wasir.', 'Rak A', '8999909028237.jpg', '150000', '2022-10-11 08:06:30', '0', '', 9985),
+('8999909028238', 'obat', 'Herbal', 'Botol', 'Cussons', 'APRICOT SYRUP 100 ML', 'Apricot merupakan sirup segar berkhasiat untuk meredakan batuk', 'Rak A', '8999909028238.jpg', '11000', '2022-10-11 03:29:07', '0', '', 9985),
+('8999909028239', 'obat', 'Herbal', 'Botol', 'Ambeven', 'BALJITOT MINYAK GOSOK 50 ML', 'Baljitot merupakan brand minyak gosok yang sebenarnya adalah singkatan dari balur dan pijat otot. Baljitot minyak gosok ini diformulasi dengan jahe merah yang akan memberikan kehangatan lebih lama dan aroma yang memberikan relaksasi.', 'Rak A', '8999909028239.jpg', '12000', '2022-10-11 03:29:07', '0', '', 9971);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_kategori`
+-- Struktur dari tabel `master_kategori`
 --
 
 CREATE TABLE `master_kategori` (
   `id` varchar(100) NOT NULL,
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `master_kategori`
+-- Dumping data untuk tabel `master_kategori`
 --
 
 INSERT INTO `master_kategori` (`id`, `waktu_update`) VALUES
@@ -587,16 +641,16 @@ INSERT INTO `master_kategori` (`id`, `waktu_update`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_merk`
+-- Struktur dari tabel `master_merk`
 --
 
 CREATE TABLE `master_merk` (
   `id` varchar(100) NOT NULL,
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `master_merk`
+-- Dumping data untuk tabel `master_merk`
 --
 
 INSERT INTO `master_merk` (`id`, `waktu_update`) VALUES
@@ -608,7 +662,7 @@ INSERT INTO `master_merk` (`id`, `waktu_update`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_pembeli`
+-- Struktur dari tabel `master_pembeli`
 --
 
 CREATE TABLE `master_pembeli` (
@@ -620,11 +674,11 @@ CREATE TABLE `master_pembeli` (
   `handphone` varchar(30) NOT NULL,
   `email` varchar(100) NOT NULL,
   `kode_dokter` varchar(15) DEFAULT NULL,
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `master_pembeli`
+-- Dumping data untuk tabel `master_pembeli`
 --
 
 INSERT INTO `master_pembeli` (`id`, `nama_pembeli`, `jenis_kelamin`, `alamat`, `telepon`, `handphone`, `email`, `kode_dokter`, `waktu_update`) VALUES
@@ -638,7 +692,7 @@ INSERT INTO `master_pembeli` (`id`, `nama_pembeli`, `jenis_kelamin`, `alamat`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_racikan`
+-- Struktur dari tabel `master_racikan`
 --
 
 CREATE TABLE `master_racikan` (
@@ -647,11 +701,11 @@ CREATE TABLE `master_racikan` (
   `kode_obat` varchar(100) NOT NULL,
   `jumlah_obat_dibuat` float NOT NULL,
   `jumlah_obat_dipakai` float NOT NULL,
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `master_racikan`
+-- Dumping data untuk tabel `master_racikan`
 --
 
 INSERT INTO `master_racikan` (`id`, `kode_racikan`, `kode_obat`, `jumlah_obat_dibuat`, `jumlah_obat_dipakai`, `waktu_update`) VALUES
@@ -661,16 +715,16 @@ INSERT INTO `master_racikan` (`id`, `kode_racikan`, `kode_obat`, `jumlah_obat_di
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_satuan`
+-- Struktur dari tabel `master_satuan`
 --
 
 CREATE TABLE `master_satuan` (
   `id` varchar(100) NOT NULL,
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `master_satuan`
+-- Dumping data untuk tabel `master_satuan`
 --
 
 INSERT INTO `master_satuan` (`id`, `waktu_update`) VALUES
@@ -686,7 +740,7 @@ INSERT INTO `master_satuan` (`id`, `waktu_update`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_supplier`
+-- Struktur dari tabel `master_supplier`
 --
 
 CREATE TABLE `master_supplier` (
@@ -695,11 +749,11 @@ CREATE TABLE `master_supplier` (
   `kontak_person` varchar(100) NOT NULL,
   `telepon` varchar(30) NOT NULL,
   `alamat` varchar(200) NOT NULL,
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `master_supplier`
+-- Dumping data untuk tabel `master_supplier`
 --
 
 INSERT INTO `master_supplier` (`id`, `nama_supplier`, `kontak_person`, `telepon`, `alamat`, `waktu_update`) VALUES
@@ -710,7 +764,7 @@ INSERT INTO `master_supplier` (`id`, `nama_supplier`, `kontak_person`, `telepon`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `modul`
+-- Struktur dari tabel `modul`
 --
 
 CREATE TABLE `modul` (
@@ -724,7 +778,7 @@ CREATE TABLE `modul` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `modul`
+-- Dumping data untuk tabel `modul`
 --
 
 INSERT INTO `modul` (`id`, `label`, `controller`, `nama_function`, `aksi_edit`, `aksi_hapus`, `aksi_tambah`) VALUES
@@ -775,7 +829,7 @@ INSERT INTO `modul` (`id`, `label`, `controller`, `nama_function`, `aksi_edit`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pembelian_langsung`
+-- Struktur dari tabel `pembelian_langsung`
 --
 
 CREATE TABLE `pembelian_langsung` (
@@ -788,11 +842,11 @@ CREATE TABLE `pembelian_langsung` (
   `supplier` int(11) NOT NULL,
   `total` decimal(20,0) NOT NULL,
   `keterangan` varchar(500) NOT NULL,
-  `waktu_update_pembelian` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `waktu_update_pembelian` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `pembelian_langsung`
+-- Dumping data untuk tabel `pembelian_langsung`
 --
 
 INSERT INTO `pembelian_langsung` (`nomor_faktur`, `kategori`, `nomor_po`, `tgl_pembelian`, `termin`, `pembayaran`, `supplier`, `total`, `keterangan`, `waktu_update_pembelian`) VALUES
@@ -809,7 +863,7 @@ INSERT INTO `pembelian_langsung` (`nomor_faktur`, `kategori`, `nomor_po`, `tgl_p
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pembelian_langsung_detail`
+-- Struktur dari tabel `pembelian_langsung_detail`
 --
 
 CREATE TABLE `pembelian_langsung_detail` (
@@ -829,7 +883,7 @@ CREATE TABLE `pembelian_langsung_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `pembelian_langsung_detail`
+-- Dumping data untuk tabel `pembelian_langsung_detail`
 --
 
 INSERT INTO `pembelian_langsung_detail` (`idd`, `nomor_faktur`, `kode_item`, `sku`, `nama_item`, `tgl_expired`, `harga`, `satuan_besar`, `satuan_kecil`, `konversi`, `kuantiti`, `total_harga`, `diskon`) VALUES
@@ -865,7 +919,7 @@ INSERT INTO `pembelian_langsung_detail` (`idd`, `nomor_faktur`, `kode_item`, `sk
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penerimaan_barang`
+-- Struktur dari tabel `penerimaan_barang`
 --
 
 CREATE TABLE `penerimaan_barang` (
@@ -875,11 +929,11 @@ CREATE TABLE `penerimaan_barang` (
   `tanggal_penerimaan` date NOT NULL,
   `penerima` varchar(200) NOT NULL,
   `keterangan` varchar(500) NOT NULL,
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `penerimaan_barang`
+-- Dumping data untuk tabel `penerimaan_barang`
 --
 
 INSERT INTO `penerimaan_barang` (`nomor_rec`, `nomor_faktur`, `nomor_po`, `tanggal_penerimaan`, `penerima`, `keterangan`, `waktu_update`) VALUES
@@ -895,7 +949,7 @@ INSERT INTO `penerimaan_barang` (`nomor_rec`, `nomor_faktur`, `nomor_po`, `tangg
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penerimaan_barang_detail`
+-- Struktur dari tabel `penerimaan_barang_detail`
 --
 
 CREATE TABLE `penerimaan_barang_detail` (
@@ -910,7 +964,7 @@ CREATE TABLE `penerimaan_barang_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `penerimaan_barang_detail`
+-- Dumping data untuk tabel `penerimaan_barang_detail`
 --
 
 INSERT INTO `penerimaan_barang_detail` (`idd`, `nomor_rec`, `kode_item`, `sku`, `nama_item`, `tgl_expired`, `kuantiti`, `satuan_kecil`) VALUES
@@ -945,7 +999,7 @@ INSERT INTO `penerimaan_barang_detail` (`idd`, `nomor_rec`, `kode_item`, `sku`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penjualan`
+-- Struktur dari tabel `penjualan`
 --
 
 CREATE TABLE `penjualan` (
@@ -963,12 +1017,33 @@ CREATE TABLE `penjualan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `penjualan`
+-- Dumping data untuk tabel `penjualan`
 --
 
 INSERT INTO `penjualan` (`id`, `id_pembeli`, `id_admin`, `total_upah_peracik`, `total_harga_item`, `total`, `tanggal`, `tanggal_jam`, `retur`, `tanggal_retur`, `admin_retur`) VALUES
 ('050719000006', NULL, 1, '0', '21000', '21000', '2019-07-05', '2019-07-05 11:15:08', '0', '0000-00-00 00:00:00', NULL),
 ('050719000007', NULL, 1, '0', '220000', '220000', '2019-07-05', '2019-07-05 11:19:49', '0', '0000-00-00 00:00:00', NULL),
+('111022000008', NULL, 1, '0', '24000', '24000', '2022-10-11', '2022-10-11 09:40:30', '0', '0000-00-00 00:00:00', NULL),
+('111022000009', NULL, 1, '0', '57000', '57000', '2022-10-11', '2022-10-11 09:41:11', '0', '0000-00-00 00:00:00', NULL),
+('111022000010', 14, 1, '0', '57000', '57000', '2022-10-11', '2022-10-11 09:41:59', '0', '0000-00-00 00:00:00', NULL),
+('111022000011', 14, 2, '0', '54000', '54000', '2022-10-11', '2022-10-11 09:44:10', '0', '0000-00-00 00:00:00', NULL),
+('111022000012', 14, 2, '0', '54000', '54000', '2022-10-11', '2022-10-11 09:50:31', '0', '0000-00-00 00:00:00', NULL),
+('111022000013', 14, 1, '0', '57000', '57000', '2022-10-11', '2022-10-11 10:22:38', '0', '0000-00-00 00:00:00', NULL),
+('111022000014', 14, 1, '0', '57000', '57000', '2022-10-11', '2022-10-11 10:24:01', '0', '0000-00-00 00:00:00', NULL),
+('111022000015', 14, 1, '0', '57000', '57000', '2022-10-11', '2022-10-11 10:24:13', '0', '0000-00-00 00:00:00', NULL),
+('111022000016', 14, 1, '0', '68000', '68000', '2022-10-11', '2022-10-11 10:26:36', '0', '0000-00-00 00:00:00', NULL),
+('111022000017', 14, 1, '0', '68000', '68000', '2022-10-11', '2022-10-11 10:28:52', '0', '0000-00-00 00:00:00', NULL),
+('111022000018', 14, 1, '0', '68000', '68000', '2022-10-11', '2022-10-11 10:29:07', '0', '0000-00-00 00:00:00', NULL),
+('111022000019', 14, 1, '0', '150000', '150000', '2022-10-11', '2022-10-11 10:42:32', '0', '0000-00-00 00:00:00', NULL),
+('111022000020', 16, 1, '0', '150000', '150000', '2022-10-11', '2022-10-11 11:09:34', '0', '0000-00-00 00:00:00', NULL),
+('111022000021', 14, 2, '0', '54000', '54000', '2022-10-11', '2022-10-11 11:47:05', '0', '0000-00-00 00:00:00', NULL),
+('111022000022', 14, 2, '0', '54000', '54000', '2022-10-11', '2022-10-11 11:50:14', '0', '0000-00-00 00:00:00', NULL),
+('111022000023', 14, 2, '0', '54000', '54000', '2022-10-11', '2022-10-11 11:50:20', '0', '0000-00-00 00:00:00', NULL),
+('111022000024', 14, 2, '0', '54000', '54000', '2022-10-11', '2022-10-11 11:50:47', '0', '0000-00-00 00:00:00', NULL),
+('111022000025', 14, 2, '0', '54000', '54000', '2022-10-11', '2022-10-11 11:51:28', '0', '0000-00-00 00:00:00', NULL),
+('111022000026', 16, 1, '0', '150000', '150000', '2022-10-11', '2022-10-11 15:01:55', '0', '0000-00-00 00:00:00', NULL),
+('111022000027', 16, 1, '0', '150000', '150000', '2022-10-11', '2022-10-11 15:02:22', '0', '0000-00-00 00:00:00', NULL),
+('111022000028', 16, 1, '0', '150000', '150000', '2022-10-11', '2022-10-11 15:06:30', '0', '0000-00-00 00:00:00', NULL),
 ('300619000001', NULL, 1, '5000', '11000', '16000', '2019-06-30', '2019-06-30 00:15:46', '0', '0000-00-00 00:00:00', NULL),
 ('300619000002', 9, 1, '5000', '11000', '16000', '2019-06-30', '2019-06-30 00:16:05', '0', '0000-00-00 00:00:00', NULL),
 ('300619000003', NULL, 1, '0', '18000', '18000', '2019-06-30', '2019-06-30 01:42:20', '0', '0000-00-00 00:00:00', NULL),
@@ -978,7 +1053,7 @@ INSERT INTO `penjualan` (`id`, `id_pembeli`, `id_admin`, `total_upah_peracik`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penjualan_detail`
+-- Struktur dari tabel `penjualan_detail`
 --
 
 CREATE TABLE `penjualan_detail` (
@@ -994,7 +1069,7 @@ CREATE TABLE `penjualan_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `penjualan_detail`
+-- Dumping data untuk tabel `penjualan_detail`
 --
 
 INSERT INTO `penjualan_detail` (`id`, `id_penjualan`, `kode_item`, `racikan`, `upah_peracik`, `harga`, `diskon`, `kuantiti`, `total`) VALUES
@@ -1009,12 +1084,44 @@ INSERT INTO `penjualan_detail` (`id`, `id_penjualan`, `kode_item`, `racikan`, `u
 (53, '050719000006', '8999909028238', '0', '0', '11000', '500', 1, '10500'),
 (54, '050719000006', '8999909028239', '0', '0', '12000', '1500', 1, '10500'),
 (55, '050719000007', '8999909028236', '0', '0', '70000', '0', 1, '70000'),
-(56, '050719000007', '8999909028237', '0', '0', '150000', '0', 1, '150000');
+(56, '050719000007', '8999909028237', '0', '0', '150000', '0', 1, '150000'),
+(57, '111022000008', '8999909028239', '0', '0', '12000', '0', 2, '24000'),
+(58, '111022000009', '8999909028216', '0', '0', '33000', '0', 1, '33000'),
+(59, '111022000009', '8999909028239', '0', '0', '12000', '0', 2, '24000'),
+(60, '111022000010', '8999909028216', '0', '0', '33000', '0', 1, '33000'),
+(61, '111022000010', '8999909028239', '0', '0', '12000', '0', 2, '24000'),
+(62, '111022000011', '8999909028234', '0', '0', '27000', '0', 2, '54000'),
+(63, '111022000012', '8999909028234', '0', '0', '27000', '0', 2, '54000'),
+(64, '111022000013', '8999909028216', '0', '0', '33000', '0', 1, '33000'),
+(65, '111022000013', '8999909028239', '0', '0', '12000', '0', 2, '24000'),
+(66, '111022000014', '8999909028216', '0', '0', '33000', '0', 1, '33000'),
+(67, '111022000014', '8999909028239', '0', '0', '12000', '0', 2, '24000'),
+(68, '111022000015', '8999909028216', '0', '0', '33000', '0', 1, '33000'),
+(69, '111022000015', '8999909028239', '0', '0', '12000', '0', 2, '24000'),
+(70, '111022000016', '8999909028238', '0', '0', '11000', '0', 1, '11000'),
+(71, '111022000016', '8999909028216', '0', '0', '33000', '0', 1, '33000'),
+(72, '111022000016', '8999909028239', '0', '0', '12000', '0', 2, '24000'),
+(73, '111022000017', '8999909028238', '0', '0', '11000', '0', 1, '11000'),
+(74, '111022000017', '8999909028216', '0', '0', '33000', '0', 1, '33000'),
+(75, '111022000017', '8999909028239', '0', '0', '12000', '0', 2, '24000'),
+(76, '111022000018', '8999909028238', '0', '0', '11000', '0', 1, '11000'),
+(77, '111022000018', '8999909028216', '0', '0', '33000', '0', 1, '33000'),
+(78, '111022000018', '8999909028239', '0', '0', '12000', '0', 2, '24000'),
+(79, '111022000019', '8999909028237', '0', '0', '150000', '0', 1, '150000'),
+(80, '111022000020', '8999909028237', '0', '0', '150000', '0', 1, '150000'),
+(81, '111022000021', '8999909028234', '0', '0', '27000', '0', 2, '54000'),
+(82, '111022000022', '8999909028234', '0', '0', '27000', '0', 2, '54000'),
+(83, '111022000023', '8999909028234', '0', '0', '27000', '0', 2, '54000'),
+(84, '111022000024', '8999909028234', '0', '0', '27000', '0', 2, '54000'),
+(85, '111022000025', '8999909028234', '0', '0', '27000', '0', 2, '54000'),
+(86, '111022000026', '8999909028237', '0', '0', '150000', '0', 1, '150000'),
+(87, '111022000027', '8999909028237', '0', '0', '150000', '0', 1, '150000'),
+(88, '111022000028', '8999909028237', '0', '0', '150000', '0', 1, '150000');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penjualan_pembayaran`
+-- Struktur dari tabel `penjualan_pembayaran`
 --
 
 CREATE TABLE `penjualan_pembayaran` (
@@ -1033,7 +1140,7 @@ CREATE TABLE `penjualan_pembayaran` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `penjualan_pembayaran`
+-- Dumping data untuk tabel `penjualan_pembayaran`
 --
 
 INSERT INTO `penjualan_pembayaran` (`id`, `id_penjualan`, `nominal`, `cara_bayar`, `swipe`, `card_no`, `holder_name`, `bank`, `month`, `year`, `security_code`, `catatan`) VALUES
@@ -1044,12 +1151,33 @@ INSERT INTO `penjualan_pembayaran` (`id`, `id_penjualan`, `nominal`, `cara_bayar
 (33, '300619000005', '50000', 'cash', '', '', '', '', '', '', '', ''),
 (34, '300619000005', '66000', 'credit card', '', '', '', 'Amex', '', '', '', ''),
 (35, '050719000006', '21000', 'cash', '', '', '', '', '', '', '', ''),
-(36, '050719000007', '220000', 'cash', '', '', '', '', '', '', '', '');
+(36, '050719000007', '220000', 'cash', '', '', '', '', '', '', '', ''),
+(37, '111022000008', '50000', 'cash', '', '', '', '', '', '', '', ''),
+(38, '111022000009', '100000', 'cash', '', '', '', '', '', '', '', 'a'),
+(39, '111022000010', '100000', 'cash', '', '', '', '', '', '', '', 'a'),
+(40, '111022000011', '100000', 'cash', '', '', '', '', '', '', '', 'a'),
+(41, '111022000012', '100000', 'cash', '', '', '', '', '', '', '', 'kk'),
+(42, '111022000013', '100000', 'cash', '', '', '', '', '', '', '', 'a'),
+(43, '111022000014', '100000', 'cash', '', '', '', '', '', '', '', ''),
+(44, '111022000015', '100000', 'cash', '', '', '', '', '', '', '', ''),
+(45, '111022000016', '100000', 'cash', '', '', '', '', '', '', '', 'a'),
+(46, '111022000017', '100000', 'cash', '', '', '', '', '', '', '', ''),
+(47, '111022000018', '100000', 'cash', '', '', '', '', '', '', '', ''),
+(48, '111022000019', '200000', 'cash', '', '', '', '', '', '', '', ''),
+(49, '111022000020', '150000', 'cash', '', '', '', '', '', '', '', ''),
+(50, '111022000021', '100000', 'cash', '', '', '', '', '', '', '', ''),
+(51, '111022000022', '100000', 'cash', '', '', '', '', '', '', '', ''),
+(52, '111022000023', '100000', 'cash', '', '', '', '', '', '', '', ''),
+(53, '111022000024', '100000', 'cash', '', '', '', '', '', '', '', ''),
+(54, '111022000025', '100000', 'cash', '', '', '', '', '', '', '', ''),
+(55, '111022000026', '200000', 'cash', '', '', '', '', '', '', '', ''),
+(56, '111022000027', '200000', 'cash', '', '', '', '', '', '', '', ''),
+(57, '111022000028', '200000', 'cash', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `piutang_dibayar_history`
+-- Struktur dari tabel `piutang_dibayar_history`
 --
 
 CREATE TABLE `piutang_dibayar_history` (
@@ -1058,13 +1186,13 @@ CREATE TABLE `piutang_dibayar_history` (
   `id_piutang` int(11) NOT NULL,
   `tanggal` date NOT NULL,
   `nominal` decimal(10,0) NOT NULL,
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `piutang_history`
+-- Struktur dari tabel `piutang_history`
 --
 
 CREATE TABLE `piutang_history` (
@@ -1078,14 +1206,14 @@ CREATE TABLE `piutang_history` (
   `nominal_dibayar` decimal(10,0) NOT NULL,
   `sudah_lunas` enum('0','1') NOT NULL DEFAULT '0',
   `tanggal_lunas` date NOT NULL,
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `keterangan` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `profil_apotek`
+-- Struktur dari tabel `profil_apotek`
 --
 
 CREATE TABLE `profil_apotek` (
@@ -1097,16 +1225,16 @@ CREATE TABLE `profil_apotek` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `profil_apotek`
+-- Dumping data untuk tabel `profil_apotek`
 --
 
 INSERT INTO `profil_apotek` (`id`, `nama_apotek`, `alamat`, `logo`, `footer_struk`) VALUES
-('1', 'APOTEK MAMA', 'Jalan Kesehatan Selamat Bekasi, Jawa Barat', '1561981979.png', 'Terimakasih telah berbelanja');
+('1', 'APOTEK MAMA', 'Jalan Kesehatan Selamat Bekasi, Jawa Barat', '1665472139.png', 'Terimakasih telah berbelanja');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `purchase_order`
+-- Struktur dari tabel `purchase_order`
 --
 
 CREATE TABLE `purchase_order` (
@@ -1117,11 +1245,11 @@ CREATE TABLE `purchase_order` (
   `supplier` int(11) NOT NULL,
   `total` decimal(20,0) NOT NULL,
   `keterangan` varchar(500) NOT NULL,
-  `waktu_update_po` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `waktu_update_po` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `purchase_order`
+-- Dumping data untuk tabel `purchase_order`
 --
 
 INSERT INTO `purchase_order` (`nomor_po`, `tgl_po`, `termin`, `pembayaran`, `supplier`, `total`, `keterangan`, `waktu_update_po`) VALUES
@@ -1140,7 +1268,7 @@ INSERT INTO `purchase_order` (`nomor_po`, `tgl_po`, `termin`, `pembayaran`, `sup
 -- --------------------------------------------------------
 
 --
--- Table structure for table `purchase_order_detail`
+-- Struktur dari tabel `purchase_order_detail`
 --
 
 CREATE TABLE `purchase_order_detail` (
@@ -1160,7 +1288,7 @@ CREATE TABLE `purchase_order_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `purchase_order_detail`
+-- Dumping data untuk tabel `purchase_order_detail`
 --
 
 INSERT INTO `purchase_order_detail` (`idd`, `nomor_po`, `kode_item`, `sku`, `nama_item`, `tgl_expired`, `harga`, `satuan_besar`, `satuan_kecil`, `konversi`, `kuantiti`, `total_harga`, `diskon`) VALUES
@@ -1200,19 +1328,19 @@ INSERT INTO `purchase_order_detail` (`idd`, `nomor_po`, `kode_item`, `sku`, `nam
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rekening_kode`
+-- Struktur dari tabel `rekening_kode`
 --
 
 CREATE TABLE `rekening_kode` (
   `kode_rekening` varchar(30) NOT NULL,
   `kategori` enum('pemasukan','pengeluaran') NOT NULL DEFAULT 'pemasukan',
   `nama_rekening` varchar(200) NOT NULL,
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `editable` enum('0','1') NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rekening_kode`
+-- Dumping data untuk tabel `rekening_kode`
 --
 
 INSERT INTO `rekening_kode` (`kode_rekening`, `kategori`, `nama_rekening`, `waktu_update`, `editable`) VALUES
@@ -1227,7 +1355,7 @@ INSERT INTO `rekening_kode` (`kode_rekening`, `kategori`, `nama_rekening`, `wakt
 -- --------------------------------------------------------
 
 --
--- Table structure for table `retur_detail`
+-- Struktur dari tabel `retur_detail`
 --
 
 CREATE TABLE `retur_detail` (
@@ -1242,7 +1370,7 @@ CREATE TABLE `retur_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `retur_detail`
+-- Dumping data untuk tabel `retur_detail`
 --
 
 INSERT INTO `retur_detail` (`idd`, `nomor_retur`, `kode_item`, `sku`, `nama_item`, `tgl_expired`, `kuantiti`, `satuan_kecil`) VALUES
@@ -1254,7 +1382,7 @@ INSERT INTO `retur_detail` (`idd`, `nomor_retur`, `kode_item`, `sku`, `nama_item
 -- --------------------------------------------------------
 
 --
--- Table structure for table `retur_pembelian`
+-- Struktur dari tabel `retur_pembelian`
 --
 
 CREATE TABLE `retur_pembelian` (
@@ -1263,11 +1391,11 @@ CREATE TABLE `retur_pembelian` (
   `nomor_rec_penerimaan` varchar(100) NOT NULL,
   `tanggal_retur` date NOT NULL,
   `keterangan` varchar(500) NOT NULL,
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `retur_pembelian`
+-- Dumping data untuk tabel `retur_pembelian`
 --
 
 INSERT INTO `retur_pembelian` (`nomor_retur`, `nomor_faktur`, `nomor_rec_penerimaan`, `tanggal_retur`, `keterangan`, `waktu_update`) VALUES
@@ -1276,7 +1404,7 @@ INSERT INTO `retur_pembelian` (`nomor_retur`, `nomor_faktur`, `nomor_rec_penerim
 -- --------------------------------------------------------
 
 --
--- Table structure for table `stok_adjustment`
+-- Struktur dari tabel `stok_adjustment`
 --
 
 CREATE TABLE `stok_adjustment` (
@@ -1290,13 +1418,13 @@ CREATE TABLE `stok_adjustment` (
   `tgl_expired` date NOT NULL,
   `satuan_kecil` varchar(100) NOT NULL,
   `keterangan` varchar(500) NOT NULL,
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `stok_keluar`
+-- Struktur dari tabel `stok_keluar`
 --
 
 CREATE TABLE `stok_keluar` (
@@ -1310,13 +1438,13 @@ CREATE TABLE `stok_keluar` (
   `tgl_expired` date NOT NULL,
   `satuan_kecil` varchar(100) NOT NULL,
   `keterangan` varchar(500) NOT NULL,
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `stok_opname`
+-- Struktur dari tabel `stok_opname`
 --
 
 CREATE TABLE `stok_opname` (
@@ -1330,7 +1458,7 @@ CREATE TABLE `stok_opname` (
   `tgl_expired` date NOT NULL,
   `satuan_kecil` varchar(100) NOT NULL,
   `keterangan` varchar(500) NOT NULL,
-  `waktu_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `waktu_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `verifikasi` enum('0','1') NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1339,7 +1467,7 @@ CREATE TABLE `stok_opname` (
 --
 
 --
--- Indexes for table `cash_in_out`
+-- Indeks untuk tabel `cash_in_out`
 --
 ALTER TABLE `cash_in_out`
   ADD PRIMARY KEY (`id`),
@@ -1349,14 +1477,14 @@ ALTER TABLE `cash_in_out`
   ADD KEY `id_penjualan` (`id_penjualan`);
 
 --
--- Indexes for table `hutang_dibayar_history`
+-- Indeks untuk tabel `hutang_dibayar_history`
 --
 ALTER TABLE `hutang_dibayar_history`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_hutang` (`id_hutang`);
 
 --
--- Indexes for table `hutang_history`
+-- Indeks untuk tabel `hutang_history`
 --
 ALTER TABLE `hutang_history`
   ADD PRIMARY KEY (`id`),
@@ -1364,7 +1492,7 @@ ALTER TABLE `hutang_history`
   ADD KEY `id_supplier` (`id_supplier`);
 
 --
--- Indexes for table `kartu_stok`
+-- Indeks untuk tabel `kartu_stok`
 --
 ALTER TABLE `kartu_stok`
   ADD PRIMARY KEY (`id`),
@@ -1376,7 +1504,7 @@ ALTER TABLE `kartu_stok`
   ADD KEY `id_penjualan` (`id_penjualan`);
 
 --
--- Indexes for table `kategori_user`
+-- Indeks untuk tabel `kategori_user`
 --
 ALTER TABLE `kategori_user`
   ADD PRIMARY KEY (`id`),
@@ -1384,7 +1512,7 @@ ALTER TABLE `kategori_user`
   ADD KEY `beranda` (`beranda`);
 
 --
--- Indexes for table `kategori_user_modul`
+-- Indeks untuk tabel `kategori_user_modul`
 --
 ALTER TABLE `kategori_user_modul`
   ADD PRIMARY KEY (`id`),
@@ -1392,7 +1520,7 @@ ALTER TABLE `kategori_user_modul`
   ADD KEY `modul` (`modul`);
 
 --
--- Indexes for table `keranjang`
+-- Indeks untuk tabel `keranjang`
 --
 ALTER TABLE `keranjang`
   ADD PRIMARY KEY (`id`),
@@ -1400,7 +1528,7 @@ ALTER TABLE `keranjang`
   ADD KEY `id_pembeli` (`id_pembeli`);
 
 --
--- Indexes for table `keranjang_detail`
+-- Indeks untuk tabel `keranjang_detail`
 --
 ALTER TABLE `keranjang_detail`
   ADD PRIMARY KEY (`id`),
@@ -1408,7 +1536,7 @@ ALTER TABLE `keranjang_detail`
   ADD KEY `kode_item` (`kode_item`);
 
 --
--- Indexes for table `master_admin`
+-- Indeks untuk tabel `master_admin`
 --
 ALTER TABLE `master_admin`
   ADD PRIMARY KEY (`id`),
@@ -1416,51 +1544,51 @@ ALTER TABLE `master_admin`
   ADD KEY `kategori` (`kategori`);
 
 --
--- Indexes for table `master_bank`
+-- Indeks untuk tabel `master_bank`
 --
 ALTER TABLE `master_bank`
   ADD PRIMARY KEY (`singkatan`);
 
 --
--- Indexes for table `master_diskon_kelipatan`
+-- Indeks untuk tabel `master_diskon_kelipatan`
 --
 ALTER TABLE `master_diskon_kelipatan`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `kode_item` (`kode_item`);
 
 --
--- Indexes for table `master_dokter`
+-- Indeks untuk tabel `master_dokter`
 --
 ALTER TABLE `master_dokter`
   ADD PRIMARY KEY (`kode_dokter`);
 
 --
--- Indexes for table `master_item`
+-- Indeks untuk tabel `master_item`
 --
 ALTER TABLE `master_item`
   ADD PRIMARY KEY (`kode_item`);
 
 --
--- Indexes for table `master_kategori`
+-- Indeks untuk tabel `master_kategori`
 --
 ALTER TABLE `master_kategori`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `master_merk`
+-- Indeks untuk tabel `master_merk`
 --
 ALTER TABLE `master_merk`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `master_pembeli`
+-- Indeks untuk tabel `master_pembeli`
 --
 ALTER TABLE `master_pembeli`
   ADD PRIMARY KEY (`id`),
   ADD KEY `kode_dokter` (`kode_dokter`);
 
 --
--- Indexes for table `master_racikan`
+-- Indeks untuk tabel `master_racikan`
 --
 ALTER TABLE `master_racikan`
   ADD PRIMARY KEY (`id`),
@@ -1468,25 +1596,25 @@ ALTER TABLE `master_racikan`
   ADD KEY `kode_obat` (`kode_obat`);
 
 --
--- Indexes for table `master_satuan`
+-- Indeks untuk tabel `master_satuan`
 --
 ALTER TABLE `master_satuan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `master_supplier`
+-- Indeks untuk tabel `master_supplier`
 --
 ALTER TABLE `master_supplier`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `modul`
+-- Indeks untuk tabel `modul`
 --
 ALTER TABLE `modul`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `pembelian_langsung`
+-- Indeks untuk tabel `pembelian_langsung`
 --
 ALTER TABLE `pembelian_langsung`
   ADD PRIMARY KEY (`nomor_faktur`),
@@ -1494,7 +1622,7 @@ ALTER TABLE `pembelian_langsung`
   ADD KEY `nomor_po` (`nomor_po`);
 
 --
--- Indexes for table `pembelian_langsung_detail`
+-- Indeks untuk tabel `pembelian_langsung_detail`
 --
 ALTER TABLE `pembelian_langsung_detail`
   ADD PRIMARY KEY (`idd`),
@@ -1502,21 +1630,21 @@ ALTER TABLE `pembelian_langsung_detail`
   ADD KEY `nomor_po` (`nomor_faktur`);
 
 --
--- Indexes for table `penerimaan_barang`
+-- Indeks untuk tabel `penerimaan_barang`
 --
 ALTER TABLE `penerimaan_barang`
   ADD PRIMARY KEY (`nomor_rec`),
   ADD KEY `nomor_faktur` (`nomor_faktur`);
 
 --
--- Indexes for table `penerimaan_barang_detail`
+-- Indeks untuk tabel `penerimaan_barang_detail`
 --
 ALTER TABLE `penerimaan_barang_detail`
   ADD PRIMARY KEY (`idd`),
   ADD KEY `nomor_rec` (`nomor_rec`);
 
 --
--- Indexes for table `penjualan`
+-- Indeks untuk tabel `penjualan`
 --
 ALTER TABLE `penjualan`
   ADD PRIMARY KEY (`id`),
@@ -1525,7 +1653,7 @@ ALTER TABLE `penjualan`
   ADD KEY `admin_retur` (`admin_retur`);
 
 --
--- Indexes for table `penjualan_detail`
+-- Indeks untuk tabel `penjualan_detail`
 --
 ALTER TABLE `penjualan_detail`
   ADD PRIMARY KEY (`id`),
@@ -1533,21 +1661,21 @@ ALTER TABLE `penjualan_detail`
   ADD KEY `id_penjualan` (`id_penjualan`);
 
 --
--- Indexes for table `penjualan_pembayaran`
+-- Indeks untuk tabel `penjualan_pembayaran`
 --
 ALTER TABLE `penjualan_pembayaran`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_penjualan` (`id_penjualan`);
 
 --
--- Indexes for table `piutang_dibayar_history`
+-- Indeks untuk tabel `piutang_dibayar_history`
 --
 ALTER TABLE `piutang_dibayar_history`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_piutang` (`id_piutang`);
 
 --
--- Indexes for table `piutang_history`
+-- Indeks untuk tabel `piutang_history`
 --
 ALTER TABLE `piutang_history`
   ADD PRIMARY KEY (`id`),
@@ -1555,20 +1683,20 @@ ALTER TABLE `piutang_history`
   ADD KEY `id_penjualan` (`id_penjualan`);
 
 --
--- Indexes for table `profil_apotek`
+-- Indeks untuk tabel `profil_apotek`
 --
 ALTER TABLE `profil_apotek`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `purchase_order`
+-- Indeks untuk tabel `purchase_order`
 --
 ALTER TABLE `purchase_order`
   ADD PRIMARY KEY (`nomor_po`),
   ADD KEY `supplier` (`supplier`);
 
 --
--- Indexes for table `purchase_order_detail`
+-- Indeks untuk tabel `purchase_order_detail`
 --
 ALTER TABLE `purchase_order_detail`
   ADD PRIMARY KEY (`idd`),
@@ -1576,20 +1704,20 @@ ALTER TABLE `purchase_order_detail`
   ADD KEY `nomor_po` (`nomor_po`);
 
 --
--- Indexes for table `rekening_kode`
+-- Indeks untuk tabel `rekening_kode`
 --
 ALTER TABLE `rekening_kode`
   ADD PRIMARY KEY (`kode_rekening`);
 
 --
--- Indexes for table `retur_detail`
+-- Indeks untuk tabel `retur_detail`
 --
 ALTER TABLE `retur_detail`
   ADD PRIMARY KEY (`idd`),
   ADD KEY `nomor_rec` (`nomor_retur`);
 
 --
--- Indexes for table `retur_pembelian`
+-- Indeks untuk tabel `retur_pembelian`
 --
 ALTER TABLE `retur_pembelian`
   ADD PRIMARY KEY (`nomor_retur`),
@@ -1597,7 +1725,7 @@ ALTER TABLE `retur_pembelian`
   ADD KEY `nomor_rec_penerimaan` (`nomor_rec_penerimaan`);
 
 --
--- Indexes for table `stok_adjustment`
+-- Indeks untuk tabel `stok_adjustment`
 --
 ALTER TABLE `stok_adjustment`
   ADD PRIMARY KEY (`id`),
@@ -1605,7 +1733,7 @@ ALTER TABLE `stok_adjustment`
   ADD KEY `kode_item` (`kode_item`);
 
 --
--- Indexes for table `stok_keluar`
+-- Indeks untuk tabel `stok_keluar`
 --
 ALTER TABLE `stok_keluar`
   ADD PRIMARY KEY (`id`),
@@ -1614,7 +1742,7 @@ ALTER TABLE `stok_keluar`
   ADD KEY `stok_keluar_ibfk_2` (`nomor_retur_pembelian`);
 
 --
--- Indexes for table `stok_opname`
+-- Indeks untuk tabel `stok_opname`
 --
 ALTER TABLE `stok_opname`
   ADD PRIMARY KEY (`id`),
@@ -1622,165 +1750,165 @@ ALTER TABLE `stok_opname`
   ADD KEY `kode_item` (`kode_item`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `cash_in_out`
+-- AUTO_INCREMENT untuk tabel `cash_in_out`
 --
 ALTER TABLE `cash_in_out`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
--- AUTO_INCREMENT for table `hutang_dibayar_history`
+-- AUTO_INCREMENT untuk tabel `hutang_dibayar_history`
 --
 ALTER TABLE `hutang_dibayar_history`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `hutang_history`
+-- AUTO_INCREMENT untuk tabel `hutang_history`
 --
 ALTER TABLE `hutang_history`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT for table `kartu_stok`
+-- AUTO_INCREMENT untuk tabel `kartu_stok`
 --
 ALTER TABLE `kartu_stok`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 
 --
--- AUTO_INCREMENT for table `kategori_user`
+-- AUTO_INCREMENT untuk tabel `kategori_user`
 --
 ALTER TABLE `kategori_user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
--- AUTO_INCREMENT for table `kategori_user_modul`
+-- AUTO_INCREMENT untuk tabel `kategori_user_modul`
 --
 ALTER TABLE `kategori_user_modul`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12062;
 
 --
--- AUTO_INCREMENT for table `keranjang`
+-- AUTO_INCREMENT untuk tabel `keranjang`
 --
 ALTER TABLE `keranjang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
 
 --
--- AUTO_INCREMENT for table `keranjang_detail`
+-- AUTO_INCREMENT untuk tabel `keranjang_detail`
 --
 ALTER TABLE `keranjang_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
--- AUTO_INCREMENT for table `master_admin`
+-- AUTO_INCREMENT untuk tabel `master_admin`
 --
 ALTER TABLE `master_admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `master_diskon_kelipatan`
+-- AUTO_INCREMENT untuk tabel `master_diskon_kelipatan`
 --
 ALTER TABLE `master_diskon_kelipatan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `master_pembeli`
+-- AUTO_INCREMENT untuk tabel `master_pembeli`
 --
 ALTER TABLE `master_pembeli`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `master_racikan`
+-- AUTO_INCREMENT untuk tabel `master_racikan`
 --
 ALTER TABLE `master_racikan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `master_supplier`
+-- AUTO_INCREMENT untuk tabel `master_supplier`
 --
 ALTER TABLE `master_supplier`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `modul`
+-- AUTO_INCREMENT untuk tabel `modul`
 --
 ALTER TABLE `modul`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
--- AUTO_INCREMENT for table `pembelian_langsung_detail`
+-- AUTO_INCREMENT untuk tabel `pembelian_langsung_detail`
 --
 ALTER TABLE `pembelian_langsung_detail`
   MODIFY `idd` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
--- AUTO_INCREMENT for table `penerimaan_barang_detail`
+-- AUTO_INCREMENT untuk tabel `penerimaan_barang_detail`
 --
 ALTER TABLE `penerimaan_barang_detail`
   MODIFY `idd` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- AUTO_INCREMENT for table `penjualan_detail`
+-- AUTO_INCREMENT untuk tabel `penjualan_detail`
 --
 ALTER TABLE `penjualan_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 
 --
--- AUTO_INCREMENT for table `penjualan_pembayaran`
+-- AUTO_INCREMENT untuk tabel `penjualan_pembayaran`
 --
 ALTER TABLE `penjualan_pembayaran`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
--- AUTO_INCREMENT for table `piutang_dibayar_history`
+-- AUTO_INCREMENT untuk tabel `piutang_dibayar_history`
 --
 ALTER TABLE `piutang_dibayar_history`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `piutang_history`
+-- AUTO_INCREMENT untuk tabel `piutang_history`
 --
 ALTER TABLE `piutang_history`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `purchase_order_detail`
+-- AUTO_INCREMENT untuk tabel `purchase_order_detail`
 --
 ALTER TABLE `purchase_order_detail`
   MODIFY `idd` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT for table `retur_detail`
+-- AUTO_INCREMENT untuk tabel `retur_detail`
 --
 ALTER TABLE `retur_detail`
   MODIFY `idd` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `stok_adjustment`
+-- AUTO_INCREMENT untuk tabel `stok_adjustment`
 --
 ALTER TABLE `stok_adjustment`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `stok_keluar`
+-- AUTO_INCREMENT untuk tabel `stok_keluar`
 --
 ALTER TABLE `stok_keluar`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `stok_opname`
+-- AUTO_INCREMENT untuk tabel `stok_opname`
 --
 ALTER TABLE `stok_opname`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `cash_in_out`
+-- Ketidakleluasaan untuk tabel `cash_in_out`
 --
 ALTER TABLE `cash_in_out`
   ADD CONSTRAINT `cash_in_out_ibfk_1` FOREIGN KEY (`kode_rekening`) REFERENCES `rekening_kode` (`kode_rekening`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -1789,20 +1917,20 @@ ALTER TABLE `cash_in_out`
   ADD CONSTRAINT `cash_in_out_ibfk_4` FOREIGN KEY (`id_penjualan`) REFERENCES `penjualan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `hutang_dibayar_history`
+-- Ketidakleluasaan untuk tabel `hutang_dibayar_history`
 --
 ALTER TABLE `hutang_dibayar_history`
   ADD CONSTRAINT `hutang_dibayar_history_ibfk_1` FOREIGN KEY (`id_hutang`) REFERENCES `hutang_history` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `hutang_history`
+-- Ketidakleluasaan untuk tabel `hutang_history`
 --
 ALTER TABLE `hutang_history`
   ADD CONSTRAINT `hutang_history_ibfk_1` FOREIGN KEY (`nomor_faktur`) REFERENCES `pembelian_langsung` (`nomor_faktur`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `hutang_history_ibfk_2` FOREIGN KEY (`id_supplier`) REFERENCES `master_supplier` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `kartu_stok`
+-- Ketidakleluasaan untuk tabel `kartu_stok`
 --
 ALTER TABLE `kartu_stok`
   ADD CONSTRAINT `kartu_stok_ibfk_1` FOREIGN KEY (`kode_item`) REFERENCES `master_item` (`kode_item`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -1813,84 +1941,84 @@ ALTER TABLE `kartu_stok`
   ADD CONSTRAINT `kartu_stok_ibfk_6` FOREIGN KEY (`id_penjualan`) REFERENCES `penjualan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `kategori_user`
+-- Ketidakleluasaan untuk tabel `kategori_user`
 --
 ALTER TABLE `kategori_user`
   ADD CONSTRAINT `kategori_user_ibfk_1` FOREIGN KEY (`beranda`) REFERENCES `modul` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `kategori_user_modul`
+-- Ketidakleluasaan untuk tabel `kategori_user_modul`
 --
 ALTER TABLE `kategori_user_modul`
   ADD CONSTRAINT `kategori_user_modul_ibfk_1` FOREIGN KEY (`kategori_user`) REFERENCES `kategori_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `kategori_user_modul_ibfk_2` FOREIGN KEY (`modul`) REFERENCES `modul` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `keranjang`
+-- Ketidakleluasaan untuk tabel `keranjang`
 --
 ALTER TABLE `keranjang`
   ADD CONSTRAINT `keranjang_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `master_admin` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `keranjang_ibfk_2` FOREIGN KEY (`id_pembeli`) REFERENCES `master_pembeli` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `keranjang_detail`
+-- Ketidakleluasaan untuk tabel `keranjang_detail`
 --
 ALTER TABLE `keranjang_detail`
   ADD CONSTRAINT `keranjang_detail_ibfk_1` FOREIGN KEY (`id_keranjang`) REFERENCES `keranjang` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `keranjang_detail_ibfk_2` FOREIGN KEY (`kode_item`) REFERENCES `master_item` (`kode_item`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `master_admin`
+-- Ketidakleluasaan untuk tabel `master_admin`
 --
 ALTER TABLE `master_admin`
   ADD CONSTRAINT `master_admin_ibfk_1` FOREIGN KEY (`kategori`) REFERENCES `kategori_user` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `master_diskon_kelipatan`
+-- Ketidakleluasaan untuk tabel `master_diskon_kelipatan`
 --
 ALTER TABLE `master_diskon_kelipatan`
   ADD CONSTRAINT `master_diskon_kelipatan_ibfk_1` FOREIGN KEY (`kode_item`) REFERENCES `master_item` (`kode_item`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `master_pembeli`
+-- Ketidakleluasaan untuk tabel `master_pembeli`
 --
 ALTER TABLE `master_pembeli`
   ADD CONSTRAINT `master_pembeli_ibfk_1` FOREIGN KEY (`kode_dokter`) REFERENCES `master_dokter` (`kode_dokter`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `master_racikan`
+-- Ketidakleluasaan untuk tabel `master_racikan`
 --
 ALTER TABLE `master_racikan`
   ADD CONSTRAINT `master_racikan_ibfk_1` FOREIGN KEY (`kode_racikan`) REFERENCES `master_item` (`kode_item`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `master_racikan_ibfk_2` FOREIGN KEY (`kode_obat`) REFERENCES `master_item` (`kode_item`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `pembelian_langsung`
+-- Ketidakleluasaan untuk tabel `pembelian_langsung`
 --
 ALTER TABLE `pembelian_langsung`
   ADD CONSTRAINT `pembelian_langsung_ibfk_1` FOREIGN KEY (`nomor_po`) REFERENCES `purchase_order` (`nomor_po`);
 
 --
--- Constraints for table `pembelian_langsung_detail`
+-- Ketidakleluasaan untuk tabel `pembelian_langsung_detail`
 --
 ALTER TABLE `pembelian_langsung_detail`
   ADD CONSTRAINT `pembelian_langsung_detail_ibfk_1` FOREIGN KEY (`nomor_faktur`) REFERENCES `pembelian_langsung` (`nomor_faktur`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `pembelian_langsung_detail_ibfk_2` FOREIGN KEY (`kode_item`) REFERENCES `master_item` (`kode_item`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `penerimaan_barang`
+-- Ketidakleluasaan untuk tabel `penerimaan_barang`
 --
 ALTER TABLE `penerimaan_barang`
   ADD CONSTRAINT `penerimaan_barang_ibfk_1` FOREIGN KEY (`nomor_faktur`) REFERENCES `pembelian_langsung` (`nomor_faktur`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `penerimaan_barang_detail`
+-- Ketidakleluasaan untuk tabel `penerimaan_barang_detail`
 --
 ALTER TABLE `penerimaan_barang_detail`
   ADD CONSTRAINT `penerimaan_barang_detail_ibfk_1` FOREIGN KEY (`nomor_rec`) REFERENCES `penerimaan_barang` (`nomor_rec`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `penjualan`
+-- Ketidakleluasaan untuk tabel `penjualan`
 --
 ALTER TABLE `penjualan`
   ADD CONSTRAINT `penjualan_ibfk_1` FOREIGN KEY (`id_pembeli`) REFERENCES `master_pembeli` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -1898,72 +2026,72 @@ ALTER TABLE `penjualan`
   ADD CONSTRAINT `penjualan_ibfk_3` FOREIGN KEY (`admin_retur`) REFERENCES `master_admin` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `penjualan_detail`
+-- Ketidakleluasaan untuk tabel `penjualan_detail`
 --
 ALTER TABLE `penjualan_detail`
   ADD CONSTRAINT `penjualan_detail_ibfk_1` FOREIGN KEY (`kode_item`) REFERENCES `master_item` (`kode_item`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `penjualan_detail_ibfk_2` FOREIGN KEY (`id_penjualan`) REFERENCES `penjualan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `penjualan_pembayaran`
+-- Ketidakleluasaan untuk tabel `penjualan_pembayaran`
 --
 ALTER TABLE `penjualan_pembayaran`
   ADD CONSTRAINT `penjualan_pembayaran_ibfk_1` FOREIGN KEY (`id_penjualan`) REFERENCES `penjualan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `piutang_dibayar_history`
+-- Ketidakleluasaan untuk tabel `piutang_dibayar_history`
 --
 ALTER TABLE `piutang_dibayar_history`
   ADD CONSTRAINT `piutang_dibayar_history_ibfk_1` FOREIGN KEY (`id_piutang`) REFERENCES `piutang_history` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `piutang_history`
+-- Ketidakleluasaan untuk tabel `piutang_history`
 --
 ALTER TABLE `piutang_history`
   ADD CONSTRAINT `piutang_history_ibfk_2` FOREIGN KEY (`id_pembeli`) REFERENCES `master_pembeli` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `piutang_history_ibfk_3` FOREIGN KEY (`id_penjualan`) REFERENCES `penjualan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `purchase_order`
+-- Ketidakleluasaan untuk tabel `purchase_order`
 --
 ALTER TABLE `purchase_order`
   ADD CONSTRAINT `purchase_order_ibfk_1` FOREIGN KEY (`supplier`) REFERENCES `master_supplier` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `purchase_order_detail`
+-- Ketidakleluasaan untuk tabel `purchase_order_detail`
 --
 ALTER TABLE `purchase_order_detail`
   ADD CONSTRAINT `purchase_order_detail_ibfk_1` FOREIGN KEY (`nomor_po`) REFERENCES `purchase_order` (`nomor_po`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `purchase_order_detail_ibfk_2` FOREIGN KEY (`kode_item`) REFERENCES `master_item` (`kode_item`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `retur_detail`
+-- Ketidakleluasaan untuk tabel `retur_detail`
 --
 ALTER TABLE `retur_detail`
   ADD CONSTRAINT `retur_detail_ibfk_1` FOREIGN KEY (`nomor_retur`) REFERENCES `retur_pembelian` (`nomor_retur`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `retur_pembelian`
+-- Ketidakleluasaan untuk tabel `retur_pembelian`
 --
 ALTER TABLE `retur_pembelian`
   ADD CONSTRAINT `retur_pembelian_ibfk_1` FOREIGN KEY (`nomor_faktur`) REFERENCES `pembelian_langsung` (`nomor_faktur`) ON UPDATE CASCADE,
   ADD CONSTRAINT `retur_pembelian_ibfk_2` FOREIGN KEY (`nomor_rec_penerimaan`) REFERENCES `penerimaan_barang` (`nomor_rec`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `stok_adjustment`
+-- Ketidakleluasaan untuk tabel `stok_adjustment`
 --
 ALTER TABLE `stok_adjustment`
   ADD CONSTRAINT `stok_adjustment_ibfk_1` FOREIGN KEY (`kode_item`) REFERENCES `master_item` (`kode_item`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `stok_keluar`
+-- Ketidakleluasaan untuk tabel `stok_keluar`
 --
 ALTER TABLE `stok_keluar`
   ADD CONSTRAINT `stok_keluar_ibfk_1` FOREIGN KEY (`kode_item`) REFERENCES `master_item` (`kode_item`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `stok_keluar_ibfk_2` FOREIGN KEY (`nomor_retur_pembelian`) REFERENCES `retur_pembelian` (`nomor_retur`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `stok_opname`
+-- Ketidakleluasaan untuk tabel `stok_opname`
 --
 ALTER TABLE `stok_opname`
   ADD CONSTRAINT `stok_opname_ibfk_1` FOREIGN KEY (`kode_item`) REFERENCES `master_item` (`kode_item`) ON DELETE CASCADE ON UPDATE CASCADE;

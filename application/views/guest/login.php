@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <title>Pharmacist</title>
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>Pharmacist</title>
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  </head>
+</head>
 
-  <body>
-    <img class="wave" src="<?php echo base_url() ?>assets/images/wave.png">
-    <div class="container">
-      <div class="img">
-        <img src="<?php echo base_url() ?>assets/images/obat.svg">
-      </div>
-      <div class="login-content">
-        <?php echo form_open('login/authlogin', ' id="Formulir" '); ?>
-        <img src="<?php echo base_url() ?>assets/images/avatar.svg">
-        <h2 class="title">Selamat Datang!</h2>
-        <div class="input-div one">
-          <div class="i">
-            <i class="fas fa-user"></i>
-          </div>
-          <div class="div">
-            <h5>Masukan Email / Username</h5>
-            <input name="username" type="text" class="input">
-          </div>
-        </div>
-        <div class="input-div pass">
-          <div class="i">
-            <i class="fas fa-lock"></i>
-          </div>
-          <div class="div">
-            <h5>Masukan Password</h5>
-            <input name="password" type="password" class="input">
-          </div>
-        </div>
-        <button type="submit" class="btn btn-success btn-block btn-lg" id="submitform">Login</button>
-
-        </form>
-      </div>
+<body>
+  <img class="wave" src="<?php echo base_url() ?>assets/images/wave.png">
+  <div class="container">
+    <div class="img">
+      <img src="<?php echo base_url() ?>assets/images/obat.svg">
     </div>
-    <script src="<?php echo base_url() ?>assets/vendor/jquery/jquery.min.js"></script>
-    <script src="<?php echo base_url() ?>assets/vendor/pnotify/pnotify.custom.js"></script>
-    <script src="<?php echo base_url() ?>assets/javascripts/theme.init.js"></script>
-    <script>
+    <div class="login-content">
+      <?php echo form_open('login/authlogin', ' id="Formulir" '); ?>
+      <img src="<?php echo base_url() ?>assets/images/avatar.svg">
+      <h2 class="title">Selamat Datang!</h2>
+      <div class="input-div one">
+        <div class="i">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="div">
+          <h5>Masukan Email / Username</h5>
+          <input name="username" type="text" class="input">
+        </div>
+      </div>
+      <div class="input-div pass">
+        <div class="i">
+          <i class="fas fa-lock"></i>
+        </div>
+        <div class="div">
+          <h5>Masukan Password</h5>
+          <input name="password" type="password" class="input">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitform">Login</button>
+
+      </form>
+    </div>
+  </div>
+  <script src="<?php echo base_url() ?>assets/vendor/jquery/jquery.min.js"></script>
+  <script src="<?php echo base_url() ?>assets/vendor/pnotify/pnotify.custom.js"></script>
+  <script src="<?php echo base_url() ?>assets/javascripts/theme.init.js"></script>
+  <script>
     const inputs = document.querySelectorAll(".input");
 
     function addcl() {
@@ -66,8 +66,8 @@
       input.addEventListener("focus", addcl);
       input.addEventListener("blur", remcl);
     });
-    </script>
-    <script>
+  </script>
+  <script>
     document.getElementById("Formulir").addEventListener("submit", function(e) {
       blurForm();
       $('.help-block').hide();
@@ -127,7 +127,7 @@
       });
       e.preventDefault();
     });
-    </script>
-  </body>
+  </script>
+</body>
 
 </html>

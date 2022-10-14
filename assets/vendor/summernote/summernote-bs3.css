@@ -2061,40 +2061,40 @@ fieldset[disabled] .note-editor .btn-danger.active {
   background-color: #d9534f;
   border-color: #d43f3a;
 }
-.note-editor .btn-success {
+.note-editor .btn-primary {
   color: #ffffff;
   background-color: #5cb85c;
   border-color: #4cae4c;
 }
-.note-editor .btn-success:hover,
-.note-editor .btn-success:focus,
-.note-editor .btn-success:active,
-.note-editor .btn-success.active,
-.open .dropdown-toggle.note-editor .btn-success {
+.note-editor .btn-primary:hover,
+.note-editor .btn-primary:focus,
+.note-editor .btn-primary:active,
+.note-editor .btn-primary.active,
+.open .dropdown-toggle.note-editor .btn-primary {
   color: #ffffff;
   background-color: #47a447;
   border-color: #398439;
 }
-.note-editor .btn-success:active,
-.note-editor .btn-success.active,
-.open .dropdown-toggle.note-editor .btn-success {
+.note-editor .btn-primary:active,
+.note-editor .btn-primary.active,
+.open .dropdown-toggle.note-editor .btn-primary {
   background-image: none;
 }
-.note-editor .btn-success.disabled,
-.note-editor .btn-success[disabled],
-fieldset[disabled] .note-editor .btn-success,
-.note-editor .btn-success.disabled:hover,
-.note-editor .btn-success[disabled]:hover,
-fieldset[disabled] .note-editor .btn-success:hover,
-.note-editor .btn-success.disabled:focus,
-.note-editor .btn-success[disabled]:focus,
-fieldset[disabled] .note-editor .btn-success:focus,
-.note-editor .btn-success.disabled:active,
-.note-editor .btn-success[disabled]:active,
-fieldset[disabled] .note-editor .btn-success:active,
-.note-editor .btn-success.disabled.active,
-.note-editor .btn-success[disabled].active,
-fieldset[disabled] .note-editor .btn-success.active {
+.note-editor .btn-primary.disabled,
+.note-editor .btn-primary[disabled],
+fieldset[disabled] .note-editor .btn-primary,
+.note-editor .btn-primary.disabled:hover,
+.note-editor .btn-primary[disabled]:hover,
+fieldset[disabled] .note-editor .btn-primary:hover,
+.note-editor .btn-primary.disabled:focus,
+.note-editor .btn-primary[disabled]:focus,
+fieldset[disabled] .note-editor .btn-primary:focus,
+.note-editor .btn-primary.disabled:active,
+.note-editor .btn-primary[disabled]:active,
+fieldset[disabled] .note-editor .btn-primary:active,
+.note-editor .btn-primary.disabled.active,
+.note-editor .btn-primary[disabled].active,
+fieldset[disabled] .note-editor .btn-primary.active {
   background-color: #5cb85c;
   border-color: #4cae4c;
 }
@@ -2967,7 +2967,7 @@ fieldset[disabled] .note-editor .btn-link:focus {
   border-top-color: #333333;
 }
 .btn-primary .note-editor .caret,
-.btn-success .note-editor .caret,
+.btn-primary .note-editor .caret,
 .btn-warning .note-editor .caret,
 .btn-danger .note-editor .caret,
 .btn-info .note-editor .caret {
@@ -2977,7 +2977,7 @@ fieldset[disabled] .note-editor .btn-link:focus {
   border-bottom-color: #333333;
 }
 .note-editor .dropup .btn-primary .caret,
-.note-editor .dropup .btn-success .caret,
+.note-editor .dropup .btn-primary .caret,
 .note-editor .dropup .btn-warning .caret,
 .note-editor .dropup .btn-danger .caret,
 .note-editor .dropup .btn-info .caret {

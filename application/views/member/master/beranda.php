@@ -67,7 +67,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                           <ul class="mg-folders">
                             <li>
                               <a href="<?php echo base_url() ?>master/dokter" class="menu-item"><i
-                                  class="fa fa-folder"></i> Master Dokter</a>
+                                  class="fa fa-folder"></i> Data Dokter</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>master/dokter">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -76,7 +76,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </li>
                             <li>
                               <a href="<?php echo base_url() ?>master/pembeli" class="menu-item"><i
-                                  class="fa fa-folder"></i> Master Pembeli</a>
+                                  class="fa fa-folder"></i> Data Pembeli</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>master/pembeli">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -85,7 +85,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </li>
                             <li>
                               <a href="<?php echo base_url() ?>master/supplier" class="menu-item"><i
-                                  class="fa fa-folder"></i> Master Supplier</a>
+                                  class="fa fa-folder"></i> Data Supplier</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>master/supplier">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -94,7 +94,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </li>
                             <li>
                               <a href="<?php echo base_url() ?>master/itemkategori" class="menu-item"><i
-                                  class="fa fa-folder"></i> Master Kategori Item</a>
+                                  class="fa fa-folder"></i> Data Kategori Item</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>master/itemkategori">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -103,7 +103,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </li>
                             <li>
                               <a href="<?php echo base_url() ?>master/satuan" class="menu-item"><i
-                                  class="fa fa-folder"></i> Master Satuan Item</a>
+                                  class="fa fa-folder"></i> Data Satuan Item</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>master/satuan">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -112,7 +112,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </li>
                             <li>
                               <a href="<?php echo base_url() ?>master/merk" class="menu-item"><i
-                                  class="fa fa-folder"></i> Master Merk</a>
+                                  class="fa fa-folder"></i> Data Merk</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>master/merk">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -121,7 +121,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </li>
                             <li>
                               <a href="<?php echo base_url() ?>master/items" class="menu-item"><i
-                                  class="fa fa-folder"></i> Master Obat dan Alkes</a>
+                                  class="fa fa-folder"></i> Data Obat dan Alkes</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>master/items">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -130,7 +130,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </li>
                             <li>
                               <a href="<?php echo base_url() ?>master/racikan" class="menu-item"><i
-                                  class="fa fa-folder"></i> Master Racikan</a>
+                                  class="fa fa-folder"></i> Data Racikan</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>master/racikan">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -177,7 +177,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             style="background-color:#daeba6; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                             <div class="widget-summary">
                               <div clwass="widget-summary-col widget-summary-col-icon sm">
-                                <div class="summary-icon bg-default" style="color:#000 ;">
+                                <div class="summary-icon bg-default" style="color:#000; background-color:#ffffff;">
                                   <img src="<?php echo base_url() ?>/assets/images/icons/buyer.png"
                                     style="height:60px; width:60" alt="">
                                 </div>
@@ -201,8 +201,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             style="background-color:#daeba6; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                             <div class="widget-summary">
                               <div clwass="widget-summary-col widget-summary-col-icon sm">
-                                <div class="summary-icon bg-default" style="color:#000 ;">
-                                  <img src="<?php echo base_url() ?>/assets/images/icons/truck.png"
+                                <div class="summary-icon bg-default" style="color:#000; background-color:#ffffff;">
+                                  <img src="<?php echo base_url() ?>/assets/images/icons/supplier.png"
                                     style="height:60px; width:60px" alt="">
                                 </div>
                               </div>
@@ -224,8 +224,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             style="background-color:#daeba6; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                             <div class="widget-summary">
                               <div clwass="widget-summary-col widget-summary-col-icon sm">
-                                <div class="summary-icon bg-default" style="color:#000 ;">
-                                  <img src="<?php echo base_url() ?>/assets/images/icons/debt.png"
+                                <div class="summary-icon bg-default" style="color:#000; background-color:#ffffff;">
+                                  <img src="<?php echo base_url() ?>/assets/images/icons/kategori.png"
                                     style="height:60px; width:60px" alt="">
                                 </div>
                               </div>
@@ -248,8 +248,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             style="background-color:#daeba6; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                             <div class="widget-summary">
                               <div clwass="widget-summary-col widget-summary-col-icon sm">
-                                <div class="summary-icon bg-default" style="color:#000 ;">
-                                  <img src="<?php echo base_url() ?>/assets/images/icons/debt.png"
+                                <div class="summary-icon bg-default" style="color:#000; background-color:#ffffff;">
+                                  <img src="<?php echo base_url() ?>/assets/images/icons/item.png"
                                     style="height:60px; width:60px" alt="">
                                 </div>
                               </div>
@@ -271,8 +271,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             style="background-color:#daeba6; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                             <div class="widget-summary">
                               <div clwass="widget-summary-col widget-summary-col-icon sm">
-                                <div class="summary-icon bg-default" style="color:#000 ;">
-                                  <img src="<?php echo base_url() ?>/assets/images/icons/debt.png"
+                                <div class="summary-icon bg-default" style="color:#000; background-color:#ffffff;">
+                                  <img src="<?php echo base_url() ?>/assets/images/icons/brand.png"
                                     style="height:60px; width:60px" alt="">
                                 </div>
                               </div>
@@ -294,8 +294,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             style="background-color:#daeba6; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                             <div class="widget-summary">
                               <div clwass="widget-summary-col widget-summary-col-icon sm">
-                                <div class="summary-icon bg-default" style="color:#000 ;">
-                                  <img src="<?php echo base_url() ?>/assets/images/icons/debt.png"
+                                <div class="summary-icon bg-default" style="color:#000; background-color:#ffffff;">
+                                  <img src="<?php echo base_url() ?>/assets/images/icons/alat.png"
                                     style="height:60px; width:60px" alt="">
                                 </div>
                               </div>
@@ -316,8 +316,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             style="background-color:#daeba6; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                             <div class="widget-summary">
                               <div clwass="widget-summary-col widget-summary-col-icon sm">
-                                <div class="summary-icon bg-default" style="color:#000 ;">
-                                  <img src="<?php echo base_url() ?>/assets/images/icons/debt.png"
+                                <div class="summary-icon bg-default" style="color:#000; background-color:#ffffff;">
+                                  <img src="<?php echo base_url() ?>/assets/images/icons/racikan.png"
                                     style="height:60px; width:60px" alt="">
                                 </div>
                               </div>
@@ -340,7 +340,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                   <div class="col-md-12">
                     <section class="panel">
-                      <header class="panel-heading">
+                      <header class="panel-heading" style="text-align:center ;">
                         <h2 class="panel-title">Produk Terlaris</h2>
                       </header>
                       <div class="panel-body">
@@ -362,7 +362,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                       </div>
                     </section>
                     <section class="panel">
-                      <header class="panel-heading" style="background-color:#ef4040 ;">
+                      <header class="panel-heading" style="background-color:#ef4040 ; text-align:center;">
                         <h2 class="panel-title" style="color:#ffffff ;">Produk akan Kadaluarsa</h2>
                       </header>
                       <div class="panel-body">

@@ -4588,7 +4588,7 @@ body .btn-primary[disabled] {
 	background-color: white;
 }
 
-body .btn-success {
+body .btn-primary {
 	border-color: #47a447;
 	background-color: #47a447;
 	border-color: #47a447 #47a447 #388038;
@@ -4596,23 +4596,23 @@ body .btn-success {
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
-body .btn-success:hover {
+body .btn-primary:hover {
 	border-color: #51b451;
 	background-color: #51b451;
 	color: white;
 }
 
-body .btn-success:active, body .btn-success:focus {
+body .btn-primary:active, body .btn-primary:focus {
 	border-color: #3f923f;
 	background-color: #3f923f;
 	color: white;
 }
 
-body .btn-success.dropdown-toggle {
+body .btn-primary.dropdown-toggle {
 	border-left-color: #3f923f;
 }
 
-body .btn-success[disabled] {
+body .btn-primary[disabled] {
 	border-color: #86cb86;
 	background-color: #86cb86;
 }

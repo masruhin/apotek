@@ -4,162 +4,170 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!doctype html>
 <html class="fixed sidebar-left-collapsed">
 
-<head>
-  <meta charset="UTF-8">
-  <link rel="shortcut icon" href="<?php echo base_url() ?>/assets/images/favicon.png" type="image/ico">
-  <title>Pharmacist</title>
-  <meta name="author" content="Masruhin">
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/font-awesome/css/font-awesome.css" />
-  <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/magnific-popup/magnific-popup.css" />
-  <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-datepicker/css/datepicker3.css" />
-  <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/theme.css" />
-  <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/skins/default.css" />
-  <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/theme-custom.css">
-  <link rel="stylesheet" href="<?php echo base_url() ?>/assets/images/" type="image/ico">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="<?php echo base_url() ?>/assets/images/favicon.png" type="image/ico">
+    <title>Pharmacist</title>
+    <meta name="author" content="Masruhin">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/magnific-popup/magnific-popup.css" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-datepicker/css/datepicker3.css" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/theme.css" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/skins/default.css" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/theme-custom.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/assets/images/" type="image/ico">
 
-  <!-- Specific Page Vendor CSS -->
-  <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/morris/morris.css" />
+    <!-- Specific Page Vendor CSS -->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/morris/morris.css" />
 
-  <script src="<?php echo base_url() ?>assets/vendor/modernizr/modernizr.js"></script>
-</head>
+    <script src="<?php echo base_url() ?>assets/vendor/modernizr/modernizr.js"></script>
+  </head>
 
-<body class="bgbody">
-  <section class="body">
+  <body class="bgbody">
+    <section class="body">
 
-    <?php $this->load->view("komponen/header.php") ?>
-    <div class="inner-wrapper">
-      <?php $this->load->view("komponen/sidebar.php") ?>
-      <section role="main" class="content-body">
-        <header class="page-header">
-          <h2> Dashboard</h2>
-        </header>
-        <!-- start: page -->
-        <div class="row">
-          <div class="col-md-12">
-            <section class="panel" style="box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
-              <div class="panel-body">
-                <div class="row">
-                  <div class="col-md-12 col-lg-12 col-xl-4">
-                    <div class="row">
-                      <div class="col-md-6 col-xl-12">
-                        <section class="panel">
-                          <div class="panel-body" style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
-                            <div class="widget-summary">
-                              <div class="widget-summary-col widget-summary-col-icon sm">
-                                <div class="summary-icon bg-default" style="color:#000 ;">
-                                  <img src="<?php echo base_url() ?>/assets/images/icons/wallet.png" style="height:50px; width:50" alt="">
+      <?php $this->load->view("komponen/header.php") ?>
+      <div class="inner-wrapper">
+        <?php $this->load->view("komponen/sidebar.php") ?>
+        <section role="main" class="content-body">
+          <header class="page-header ">
+            <h2 style="text-align:center ;"> Dashboard</h2>
+          </header>
+          <!-- start: page -->
+          <div class="row">
+            <div class="col-md-12">
+              <section class="panel" style="box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12 col-xl-4">
+                      <div class="row">
+                        <div class="col-md-6 col-xl-12">
+                          <section class="panel">
+                            <div class="panel-body"
+                              style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
+                              <div class="widget-summary">
+                                <div class="widget-summary-col widget-summary-col-icon sm">
+                                  <div class="summary-icon bg-default" style="color:#000 ;">
+                                    <img src="<?php echo base_url() ?>/assets/images/icons/wallet.png"
+                                      style="height:50px; width:50" alt="">
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="widget-summary-col">
-                                <div class="summary">
-                                  <h4 class="title">Total Penjualan Hari Ini</h4>
-                                  <div class="info">
-                                    <strong class="amount" id="penjualan_hari_ini"></strong>
+                                <div class="widget-summary-col">
+                                  <div class="summary">
+                                    <h4 class="title">Total Penjualan Hari Ini</h4>
+                                    <div class="info">
+                                      <strong class="amount" id="penjualan_hari_ini"></strong>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </section>
-                      </div>
-                      <div class="col-md-6 col-xl-12">
-                        <section class="panel">
-                          <div class="panel-body" style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
-                            <div class="widget-summary">
-                              <div clwass="widget-summary-col widget-summary-col-icon sm">
-                                <div class="summary-icon bg-default" style="color:#000 ;">
-                                  <img src="<?php echo base_url() ?>/assets/images/icons/days.png" style="height:50px; width:50" alt="">
+                          </section>
+                        </div>
+                        <div class="col-md-6 col-xl-12">
+                          <section class="panel">
+                            <div class="panel-body"
+                              style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
+                              <div class="widget-summary">
+                                <div clwass="widget-summary-col widget-summary-col-icon sm">
+                                  <div class="summary-icon bg-default" style="color:#000 ;">
+                                    <img src="<?php echo base_url() ?>/assets/images/icons/days.png"
+                                      style="height:50px; width:50" alt="">
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="widget-summary-col">
-                                <div class="summary">
-                                  <h4 class="title">Total Penjualan Minggu Ini</h4>
-                                  <div class="info">
-                                    <strong class="amount" id="penjualan_minggu_ini"></strong>
+                                <div class="widget-summary-col">
+                                  <div class="summary">
+                                    <h4 class="title">Total Penjualan Minggu Ini</h4>
+                                    <div class="info">
+                                      <strong class="amount" id="penjualan_minggu_ini"></strong>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </section>
-                      </div>
-                      <div class="col-md-6 col-xl-12">
+                          </section>
+                        </div>
+                        <div class="col-md-6 col-xl-12">
 
-                        <section class="panel">
-                          <div class="panel-body" style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
-                            <div class="widget-summary">
-                              <div clwass="widget-summary-col widget-summary-col-icon sm">
-                                <div class="summary-icon bg-default" style="color:#000 ;">
-                                  <img src="<?php echo base_url() ?>/assets/images/icons/month.png" style="height:50px; width:50" alt="">
+                          <section class="panel">
+                            <div class="panel-body"
+                              style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
+                              <div class="widget-summary">
+                                <div clwass="widget-summary-col widget-summary-col-icon sm">
+                                  <div class="summary-icon bg-default" style="color:#000 ;">
+                                    <img src="<?php echo base_url() ?>/assets/images/icons/month.png"
+                                      style="height:50px; width:50" alt="">
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="widget-summary-col">
-                                <div class="summary">
-                                  <h4 class="title">Total Penjualan Bulan Ini</h4>
-                                  <div class="info">
-                                    <strong class="amount" id="penjualan_bulan_ini"></strong>
+                                <div class="widget-summary-col">
+                                  <div class="summary">
+                                    <h4 class="title">Total Penjualan Bulan Ini</h4>
+                                    <div class="info">
+                                      <strong class="amount" id="penjualan_bulan_ini"></strong>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </section>
-                      </div>
-                      <div class="col-md-6 col-xl-12">
-                        <section class="panel">
-                          <div class="panel-body" style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
-                            <div class="widget-summary">
-                              <div clwass="widget-summary-col widget-summary-col-icon sm">
-                                <div class="summary-icon bg-default" style="color:#000 ;">
-                                  <img src="<?php echo base_url() ?>/assets/images/icons/debt.png" style="height:50px; width:50" alt="">
+                          </section>
+                        </div>
+                        <div class="col-md-6 col-xl-12">
+                          <section class="panel">
+                            <div class="panel-body"
+                              style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
+                              <div class="widget-summary">
+                                <div clwass="widget-summary-col widget-summary-col-icon sm">
+                                  <div class="summary-icon bg-default" style="color:#000 ;">
+                                    <img src="<?php echo base_url() ?>/assets/images/icons/debt.png"
+                                      style="height:50px; width:50" alt="">
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="widget-summary-col">
-                                <div class="summary">
-                                  <h4 class="title">Total Piutang Belum Dibayar</h4>
-                                  <div class="info">
-                                    <strong class="amount" id="piutang_belum_dibayar"></strong>
+                                <div class="widget-summary-col">
+                                  <div class="summary">
+                                    <h4 class="title">Total Piutang Belum Dibayar</h4>
+                                    <div class="info">
+                                      <strong class="amount" id="piutang_belum_dibayar"></strong>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </section>
+                          </section>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </section>
+              </section>
+            </div>
           </div>
-        </div>
 
 
-        <section class="panel" style="box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
-          <div class="panel-body">
-            <div class="row">
-              <div class="col-md-12 col-lg-12 col-xl-4">
-                <div class="row">
-                  <div class="col-md-12 col-xl-12">
-                    <section class="panel">
-                      <div class="panel-body">
-                        <div class="chart chart-md" id="GrafikPenjualan"></div>
-                      </div>
-                      <footer class="panel-heading center">
-                        <h2 class="panel-title">Total Penjualan 2 Minggu Terakhir</h2>
-                      </footer>
-                    </section>
+          <section class="panel" style="box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-12 col-lg-12 col-xl-4">
+                  <div class="row">
+                    <div class="col-md-12 col-xl-12">
+                      <section class="panel">
+                        <div class="panel-body">
+                          <div class="chart chart-md" id="GrafikPenjualan"></div>
+                        </div>
+                        <footer class="panel-heading center">
+                          <h2 class="panel-title">Total Penjualan 2 Minggu Terakhir</h2>
+                        </footer>
+                      </section>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- <section class="panel" style="box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
+          <!-- <section class="panel" style="box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
             <div class="panel-body">
               <div class="row">
                 <div class="col-md-12 col-lg-12 col-xl-4">
@@ -237,117 +245,125 @@ defined('BASEPATH') or exit('No direct script access allowed');
               </div>
             </div>
           </section> -->
-        <div class="row">
-          <div class="col-md-12">
-            <section class="panel" style="box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
-              <div class="panel-body">
-                <div class="row">
-                  <div class="col-md-12 col-lg-12 col-xl-4">
-                    <div class="row">
-                      <div class="col-md-6 col-xl-12">
-                        <section class="panel">
-                          <div class="panel-body" style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
-                            <div class="widget-summary">
-                              <div class="widget-summary-col widget-summary-col-icon">
-                                <div class="summary-icon bg-default" style="color:#000;">
-                                  <img src="<?php echo base_url() ?>/assets/images/icons/buy.png" style="height:50px; width:50" alt="">
+          <div class="row">
+            <div class="col-md-12">
+              <section class="panel" style="box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12 col-xl-4">
+                      <div class="row">
+                        <div class="col-md-6 col-xl-12">
+                          <section class="panel">
+                            <div class="panel-body"
+                              style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
+                              <div class="widget-summary">
+                                <div class="widget-summary-col widget-summary-col-icon">
+                                  <div class="summary-icon bg-default" style="color:#000;">
+                                    <img src="<?php echo base_url() ?>/assets/images/icons/buy.png"
+                                      style="height:50px; width:50" alt="">
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="widget-summary-col">
-                                <div class="summary">
-                                  <h6 class="title">
-                                    Jumlah PO
-                                  </h6>
-                                  <div class="info">
-                                    <strong class=" amount" id="total_po"></strong>
+                                <div class="widget-summary-col">
+                                  <div class="summary">
+                                    <h6 class="title">
+                                      Jumlah PO
+                                    </h6>
+                                    <div class="info">
+                                      <strong class=" amount" id="total_po"></strong>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </section>
-                      </div>
-                      <div class="col-md-6 col-xl-12">
-                        <section class="panel">
-                          <div class="panel-body" style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
-                            <div class="widget-summary">
-                              <div class="widget-summary-col widget-summary-col-icon">
-                                <div class="summary-icon bg-default" style="color:#000;">
-                                  <img src="<?php echo base_url() ?>/assets/images/icons/buys.png" style="height:50px; width:50" alt="">
+                          </section>
+                        </div>
+                        <div class="col-md-6 col-xl-12">
+                          <section class="panel">
+                            <div class="panel-body"
+                              style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
+                              <div class="widget-summary">
+                                <div class="widget-summary-col widget-summary-col-icon">
+                                  <div class="summary-icon bg-default" style="color:#000;">
+                                    <img src="<?php echo base_url() ?>/assets/images/icons/buys.png"
+                                      style="height:50px; width:50" alt="">
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="widget-summary-col">
-                                <div class="summary">
-                                  <h6 class="title">
-                                    Jumlah Pembelian
-                                  </h6>
-                                  <div class="info">
-                                    <strong class="amount" id="total_pembelian"></strong>
+                                <div class="widget-summary-col">
+                                  <div class="summary">
+                                    <h6 class="title">
+                                      Jumlah Pembelian
+                                    </h6>
+                                    <div class="info">
+                                      <strong class="amount" id="total_pembelian"></strong>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </section>
-                      </div>
-                      <div class="col-md-6 col-xl-12">
+                          </section>
+                        </div>
+                        <div class="col-md-6 col-xl-12">
 
-                        <section class="panel">
-                          <div class="panel-body" style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
-                            <div class="widget-summary">
-                              <div class="widget-summary-col widget-summary-col-icon">
-                                <div class="summary-icon bg-default" style="color:#000;">
-                                  <img src="<?php echo base_url() ?>/assets/images/icons/masuk.png" style="height:50px; width:50" alt="">
+                          <section class="panel">
+                            <div class="panel-body"
+                              style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
+                              <div class="widget-summary">
+                                <div class="widget-summary-col widget-summary-col-icon">
+                                  <div class="summary-icon bg-default" style="color:#000;">
+                                    <img src="<?php echo base_url() ?>/assets/images/icons/masuk.png"
+                                      style="height:50px; width:50" alt="">
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="widget-summary-col">
-                                <div class="summary">
-                                  <h6 class="title">
-                                    Jumlah Penerimaan
-                                  </h6>
-                                  <div class="info">
-                                    <strong class="amount" id="total_penerimaan"></strong>
+                                <div class="widget-summary-col">
+                                  <div class="summary">
+                                    <h6 class="title">
+                                      Jumlah Penerimaan
+                                    </h6>
+                                    <div class="info">
+                                      <strong class="amount" id="total_penerimaan"></strong>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </section>
-                      </div>
-                      <div class="col-md-6 col-xl-12">
+                          </section>
+                        </div>
+                        <div class="col-md-6 col-xl-12">
 
-                        <section class="panel">
-                          <div class="panel-body" style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
-                            <div class="widget-summary">
-                              <div class="widget-summary-col widget-summary-col-icon">
-                                <div class="summary-icon bg-default" style="color:#000;">
-                                  <img src="<?php echo base_url() ?>/assets/images/icons/reject.png" style="height:50px; width:50" alt="">
+                          <section class="panel">
+                            <div class="panel-body"
+                              style="background-color:#abdd12; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
+                              <div class="widget-summary">
+                                <div class="widget-summary-col widget-summary-col-icon">
+                                  <div class="summary-icon bg-default" style="color:#000;">
+                                    <img src="<?php echo base_url() ?>/assets/images/icons/reject.png"
+                                      style="height:50px; width:50" alt="">
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="widget-summary-col">
-                                <div class="summary">
-                                  <h6 class="title">
-                                    Jumlah Retur Pembelian
-                                  </h6>
-                                  <div class="info">
-                                    <strong class="amount" id="total_retur"></strong>
+                                <div class="widget-summary-col">
+                                  <div class="summary">
+                                    <h6 class="title">
+                                      Jumlah Retur Pembelian
+                                    </h6>
+                                    <div class="info">
+                                      <strong class="amount" id="total_retur"></strong>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </section>
+                          </section>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </section>
+              </section>
 
 
 
 
-            <!-- <section class="panel">
+              <!-- <section class="panel">
                 <div class="panel-body">
                   <div class="row">
                     <div class="col-md-6 col-xl-12">
@@ -427,8 +443,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   </div>
                 </div>
               </section> -->
-          </div>
-          <!-- <div class="col-md-12">
+            </div>
+            <!-- <div class="col-md-12">
               <div class="col-md-6">
                 <section class="panel">
                   <header class="panel-heading center">
@@ -475,48 +491,48 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </section>
               </div>
             </div> -->
-        </div>
+          </div>
 
-        <section class="panel" style="box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4);">
-          <div class="panel-body">
-            <div class="row">
-              <div class="col-md-9 col-lg-12 col-xl-4">
-                <div class="row">
-                  <div class="col-md-12 col-xl-12">
-                    <section class="panel">
-                      <div class="panel-body">
-                        <div class="chart chart-md" id="GrafikCash"></div>
-                      </div>
-                      <header class="panel-heading center">
-                        <h2 class="panel-title">Pemasukan dan Pengeluaran 2 Minggu Terakhir</h2>
-                      </header>
-                    </section>
+          <section class="panel" style="box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4);">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-9 col-lg-12 col-xl-4">
+                  <div class="row">
+                    <div class="col-md-12 col-xl-12">
+                      <section class="panel">
+                        <div class="panel-body">
+                          <div class="chart chart-md" id="GrafikCash"></div>
+                        </div>
+                        <header class="panel-heading center">
+                          <h2 class="panel-title">Pemasukan dan Pengeluaran 2 Minggu Terakhir</h2>
+                        </header>
+                      </section>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
+
+
+          <!-- end: page -->
         </section>
+      </div>
+    </section>
 
-
-        <!-- end: page -->
-      </section>
-    </div>
-  </section>
-
-  <!-- Vendor -->
-  <script src="<?php echo base_url() ?>assets/vendor/jquery/jquery.min.js"></script>
-  <script src="<?php echo base_url() ?>assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
-  <script src="<?php echo base_url() ?>assets/vendor/bootstrap/js/bootstrap.js"></script>
-  <script src="<?php echo base_url() ?>assets/vendor/nanoscroller/nanoscroller.js"></script>
-  <script src="<?php echo base_url() ?>assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-  <script src="<?php echo base_url() ?>assets/vendor/magnific-popup/magnific-popup.js"></script>
-  <script src="<?php echo base_url() ?>assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
-  <script src="<?php echo base_url() ?>assets/javascripts/theme.js"></script>
-  <script src="<?php echo base_url() ?>assets/javascripts/theme.init.js"></script>
-  <script src="<?php echo base_url() ?>assets/vendor/raphael/raphael.js"></script>
-  <script src="<?php echo base_url() ?>assets/vendor/morris/morris.js"></script>
-  <script>
+    <!-- Vendor -->
+    <script src="<?php echo base_url() ?>assets/vendor/jquery/jquery.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+    <script src="<?php echo base_url() ?>assets/vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="<?php echo base_url() ?>assets/vendor/nanoscroller/nanoscroller.js"></script>
+    <script src="<?php echo base_url() ?>assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="<?php echo base_url() ?>assets/vendor/magnific-popup/magnific-popup.js"></script>
+    <script src="<?php echo base_url() ?>assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+    <script src="<?php echo base_url() ?>assets/javascripts/theme.js"></script>
+    <script src="<?php echo base_url() ?>assets/javascripts/theme.init.js"></script>
+    <script src="<?php echo base_url() ?>assets/vendor/raphael/raphael.js"></script>
+    <script src="<?php echo base_url() ?>assets/vendor/morris/morris.js"></script>
+    <script>
     $.ajax({
       url: '<?php echo base_url() ?>dashboard/penjualan_2_minggu', // getchart.php
       dataType: 'JSON',
@@ -650,7 +666,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         }
       }
     });
-  </script>
-</body>
+    </script>
+  </body>
 
 </html>

@@ -104,7 +104,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 <h2 class="panel-title">Data Penerimaan Barang</h2>
                             </div>
                             <?php
-                            echo level_user('pembelian', 'penerimaan', $this->session->userdata('kategori'), 'add') > 0 ? '<div class="col-md-6" align="right"><a class="btn btn-success" href="#"  data-toggle="modal" data-target="#tambahData"><i class="fa fa-plus"></i> Tambah</a></div>' : '';
+                            echo level_user('pembelian', 'penerimaan', $this->session->userdata('kategori'), 'add') > 0 ? '<div class="col-md-6" align="right"><a class="btn btn-primary" href="#"  data-toggle="modal" data-target="#tambahData"><i class="fa fa-plus"></i> Tambah</a></div>' : '';
                             ?>
                         </div>
                     </header>
@@ -231,8 +231,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 <h2 class="panel-title">Detail Penerimaan</h2>
                             </div>
                             <div class="col-md-9 text-right">
-                                <a class="btn btn-success" id="linkprint" target="_blank"><i class="fa fa-print"></i> Print</a>
-                                <a class="btn btn-success" id="linkpdf" target="_blank"><i class="fa fa-file-pdf-o"></i> PDF</a>
+                                <a class="btn btn-primary" id="linkprint" target="_blank"><i class="fa fa-print"></i> Print</a>
+                                <a class="btn btn-primary" id="linkpdf" target="_blank"><i class="fa fa-file-pdf-o"></i> PDF</a>
                             </div>
                         </div>
                     </header>

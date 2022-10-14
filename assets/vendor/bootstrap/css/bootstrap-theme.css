@@ -10,7 +10,7 @@
  */
 .btn-default,
 .btn-primary,
-.btn-success,
+.btn-primary,
 .btn-info,
 .btn-warning,
 .btn-danger {
@@ -20,13 +20,13 @@
 }
 .btn-default:active,
 .btn-primary:active,
-.btn-success:active,
+.btn-primary:active,
 .btn-info:active,
 .btn-warning:active,
 .btn-danger:active,
 .btn-default.active,
 .btn-primary.active,
-.btn-success.active,
+.btn-primary.active,
 .btn-info.active,
 .btn-warning.active,
 .btn-danger.active {
@@ -35,7 +35,7 @@
 }
 .btn-default .badge,
 .btn-primary .badge,
-.btn-success .badge,
+.btn-primary .badge,
 .btn-info .badge,
 .btn-warning .badge,
 .btn-danger .badge {
@@ -95,7 +95,7 @@
   background-color: #2d6ca2;
   background-image: none;
 }
-.btn-success {
+.btn-primary {
   background-image: -webkit-linear-gradient(top, #5cb85c 0%, #419641 100%);
   background-image: -o-linear-gradient(top, #5cb85c 0%, #419641 100%);
   background-image: linear-gradient(to bottom, #5cb85c 0%, #419641 100%);
@@ -104,18 +104,18 @@
   background-repeat: repeat-x;
   border-color: #3e8f3e;
 }
-.btn-success:hover,
-.btn-success:focus {
+.btn-primary:hover,
+.btn-primary:focus {
   background-color: #419641;
   background-position: 0 -15px;
 }
-.btn-success:active,
-.btn-success.active {
+.btn-primary:active,
+.btn-primary.active {
   background-color: #419641;
   border-color: #3e8f3e;
 }
-.btn-success:disabled,
-.btn-success[disabled] {
+.btn-primary:disabled,
+.btn-primary[disabled] {
   background-color: #419641;
   background-image: none;
 }

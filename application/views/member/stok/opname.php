@@ -44,7 +44,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </div>
                             <div class="col-md-6" align="right">
                                 <?php
-                                echo level_user('stok', 'opname', $this->session->userdata('kategori'), 'add') > 0 ? '<a class="btn btn-primary" href="#"  data-toggle="modal" data-target="#verifikasiData"><i class="fa fa-search"></i> Verifikasi Stok Opname</a><a class="btn btn-success" href="#"  data-toggle="modal" data-target="#tambahData"><i class="fa fa-plus"></i> Tambah</a>' : '';
+                                echo level_user('stok', 'opname', $this->session->userdata('kategori'), 'add') > 0 ? '<a class="btn btn-primary" href="#"  data-toggle="modal" data-target="#verifikasiData"><i class="fa fa-search"></i> Verifikasi Stok Opname</a><a class="btn btn-primary" href="#"  data-toggle="modal" data-target="#tambahData"><i class="fa fa-plus"></i> Tambah</a>' : '';
                                 ?>
                             </div>
                         </div>
@@ -84,7 +84,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </div>
                             <div class="col-md-6" align="right">
                                 <input type="hidden" name="aksiverifikasi" id="aksiverifikasi">
-                                <button type="submit" class="btn btn-success" id="verifikasisubmit"><i class="fa fa-check-circle"></i> Verifikasi</button>
+                                <button type="submit" class="btn btn-primary" id="verifikasisubmit"><i class="fa fa-check-circle"></i> Verifikasi</button>
                                 <button type="submit" class="btn btn-danger" id="verifikasihapus"><i class="fa fa-trash-o"></i> Hapus</button>
                             </div>
                         </div>

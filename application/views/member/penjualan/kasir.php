@@ -182,7 +182,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 									<button type="button" class="mb-xs mt-xs mr-xs btn btn-warning btn-lg btn-block" data-toggle="modal" data-target="#modalHold" id="holdtransaksi" disabled="disabled">Hold</button>
 								</div>
 								<div class="col-md-4">
-									<button type="button" class="mb-xs mt-xs mr-xs btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#modal-payment" id="paymenttransaksi" disabled="disabled">Payment</button>
+									<button type="button" class="mb-xs mt-xs mr-xs btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modal-payment" id="paymenttransaksi" disabled="disabled">Payment</button>
 								</div>
 							</div>
 						</div>
@@ -193,7 +193,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						<div class="panel-body">
 							<div class="input-group mb-md">
 								<input type="text" class="form-control" id="keywords" placeholder="Search Product Keyword" onkeyup="searchFilter()">
-								<a class="input-group-addon btn-success btn"><i class="fa fa-search"></i></a>
+								<a class="input-group-addon btn-primary btn"><i class="fa fa-search"></i></a>
 								<select id="sortBy" onchange="searchFilter()" class="form-control">
 									<option value="">Sort By</option>
 									<option value="asc">Ascending</option>
@@ -223,7 +223,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 												</div>
 												<div class="row">
 													<div class="col-md-12">
-														<a id="beli-item<?php echo $post['kode_item']; ?>" class="btn btn-xs btn-success" onclick="beli(this)" data-barcode="<?php echo $post['kode_item']; ?>"><i class="fa fa-shopping-cart"></i> Beli Produk</a>
+														<a id="beli-item<?php echo $post['kode_item']; ?>" class="btn btn-xs btn-primary" onclick="beli(this)" data-barcode="<?php echo $post['kode_item']; ?>"><i class="fa fa-shopping-cart"></i> Beli Produk</a>
 													</div>
 												</div>
 											</div>
@@ -481,12 +481,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 									<h3 class="text-semibold text-dark text-uppercase mb-none text-center">Nominal</h3>
 									<input type="hidden" id="Valtotalharusdibayar">
 									<button type="button" class="btn btn-primary" id="totalharusdibayar"></button>
-									<button type="button" onclick="cash(this)" data-nominal="5000" class="btn btn-success">Rp 5.000</button>
-									<button type="button" onclick="cash(this)" data-nominal="10000" class="btn btn-success">Rp 10.000</button>
-									<button type="button" onclick="cash(this)" data-nominal="20000" class="btn btn-success">Rp 20.000</button>
-									<button type="button" onclick="cash(this)" data-nominal="50000" class="btn btn-success">Rp 50.000</button>
-									<button type="button" onclick="cash(this)" data-nominal="100000" class="btn btn-success">Rp 100.000</button>
-									<button type="button" onclick="cash(this)" data-nominal="200000" class="btn btn-success">Rp 200.000</button>
+									<button type="button" onclick="cash(this)" data-nominal="5000" class="btn btn-primary">Rp 5.000</button>
+									<button type="button" onclick="cash(this)" data-nominal="10000" class="btn btn-primary">Rp 10.000</button>
+									<button type="button" onclick="cash(this)" data-nominal="20000" class="btn btn-primary">Rp 20.000</button>
+									<button type="button" onclick="cash(this)" data-nominal="50000" class="btn btn-primary">Rp 50.000</button>
+									<button type="button" onclick="cash(this)" data-nominal="100000" class="btn btn-primary">Rp 100.000</button>
+									<button type="button" onclick="cash(this)" data-nominal="200000" class="btn btn-primary">Rp 200.000</button>
 									<button type="button" onclick="clearcash()" class="btn btn-danger">Clear</button>
 								</div>
 							</div>
@@ -693,7 +693,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						</div>
 						<div class="row">
 							<div class="col-md-12 text-right">
-								<button type="submit" class="mb-xs mt-xs mr-xs btn btn-success btn-lg btn-block" id="submitPayment" disabled>Submit Payment</button>
+								<button type="submit" class="mb-xs mt-xs mr-xs btn btn-primary btn-lg btn-block" id="submitPayment" disabled>Submit Payment</button>
 							</div>
 						</div>
 					</footer>
