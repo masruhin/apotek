@@ -7,7 +7,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
   <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="<?php echo base_url() ?>/assets/images/favicon.png" type="image/ico">
-    <title>Apotek Bhamada</title>
+    <title>Pharmacist</title>
     <meta name="author" content="Masruhin">
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -145,7 +145,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </div>
               </menu>
               <div class="inner-body mg-main">
-                <div class="row" style="margin-top:-30px;">
+                <div class="row" style="margin-top:-60px;">
                   <div class="col-md-6 col-lg-12 col-xl-6">
                     <div class="row">
                       <div class="col-md-12 col-lg-6 col-xl-6">
@@ -154,9 +154,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             style="background-color:#daeba6; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                             <div class="widget-summary">
                               <div clwass="widget-summary-col widget-summary-col-icon sm">
-                                <div class="summary-icon bg-default" style="color:#000 ;">
-                                  <img src="<?php echo base_url() ?>/assets/images/icons/debt.png"
-                                    style="height:50px; width:50" alt="">
+                                <div class="summary-icon bg-default" style="color:#000; background-color:#ffffff;">
+                                  <img src="<?php echo base_url() ?>/assets/images/icons/doctor.png"
+                                    style="height:60px; width:60" alt="">
                                 </div>
                               </div>
                               <div class="widget-summary-col">
@@ -178,8 +178,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             <div class="widget-summary">
                               <div clwass="widget-summary-col widget-summary-col-icon sm">
                                 <div class="summary-icon bg-default" style="color:#000 ;">
-                                  <img src="<?php echo base_url() ?>/assets/images/icons/debt.png"
-                                    style="height:50px; width:50" alt="">
+                                  <img src="<?php echo base_url() ?>/assets/images/icons/buyer.png"
+                                    style="height:60px; width:60" alt="">
                                 </div>
                               </div>
                               <div class="widget-summary-col">
@@ -194,13 +194,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
                           </div>
                         </section>
                       </div>
+
                       <div class="col-md-12 col-lg-6 col-xl-6">
-                        <section class="panel panel-featured-left panel-featured-tertiary">
-                          <div class="panel-body">
+                        <section class="panel">
+                          <div class="panel-body"
+                            style="background-color:#daeba6; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                             <div class="widget-summary">
-                              <div class="widget-summary-col widget-summary-col-icon">
-                                <div class="summary-icon bg-tertiary">
-                                  <i class="fa fa-truck"></i>
+                              <div clwass="widget-summary-col widget-summary-col-icon sm">
+                                <div class="summary-icon bg-default" style="color:#000 ;">
+                                  <img src="<?php echo base_url() ?>/assets/images/icons/truck.png"
+                                    style="height:60px; width:60px" alt="">
                                 </div>
                               </div>
                               <div class="widget-summary-col">
@@ -216,12 +219,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         </section>
                       </div>
                       <div class="col-md-12 col-lg-6 col-xl-6">
-                        <section class="panel panel-featured-left panel-featured-quartenary">
-                          <div class="panel-body">
+                        <section class="panel">
+                          <div class="panel-body"
+                            style="background-color:#daeba6; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                             <div class="widget-summary">
-                              <div class="widget-summary-col widget-summary-col-icon">
-                                <div class="summary-icon bg-quartenary">
-                                  <i class="fa fa-list-ol"></i>
+                              <div clwass="widget-summary-col widget-summary-col-icon sm">
+                                <div class="summary-icon bg-default" style="color:#000 ;">
+                                  <img src="<?php echo base_url() ?>/assets/images/icons/debt.png"
+                                    style="height:60px; width:60px" alt="">
                                 </div>
                               </div>
                               <div class="widget-summary-col">
@@ -238,12 +243,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
                       </div>
 
                       <div class="col-md-12 col-lg-6 col-xl-6">
-                        <section class="panel panel-featured-left panel-featured-secondary">
-                          <div class="panel-body">
+                        <section class="panel">
+                          <div class="panel-body"
+                            style="background-color:#daeba6; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                             <div class="widget-summary">
-                              <div class="widget-summary-col widget-summary-col-icon">
-                                <div class="summary-icon bg-secondary">
-                                  <i class="fa fa-list-ol"></i>
+                              <div clwass="widget-summary-col widget-summary-col-icon sm">
+                                <div class="summary-icon bg-default" style="color:#000 ;">
+                                  <img src="<?php echo base_url() ?>/assets/images/icons/debt.png"
+                                    style="height:60px; width:60px" alt="">
                                 </div>
                               </div>
                               <div class="widget-summary-col">
@@ -259,12 +266,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         </section>
                       </div>
                       <div class="col-md-12 col-lg-6 col-xl-6">
-                        <section class="panel panel-featured-left panel-featured-tertiary">
-                          <div class="panel-body">
+                        <section class="panel">
+                          <div class="panel-body"
+                            style="background-color:#daeba6; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                             <div class="widget-summary">
-                              <div class="widget-summary-col widget-summary-col-icon">
-                                <div class="summary-icon bg-tertiary">
-                                  <i class="fa fa-list-ol"></i>
+                              <div clwass="widget-summary-col widget-summary-col-icon sm">
+                                <div class="summary-icon bg-default" style="color:#000 ;">
+                                  <img src="<?php echo base_url() ?>/assets/images/icons/debt.png"
+                                    style="height:60px; width:60px" alt="">
                                 </div>
                               </div>
                               <div class="widget-summary-col">
@@ -280,12 +289,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         </section>
                       </div>
                       <div class="col-md-12 col-lg-6 col-xl-6">
-                        <section class="panel panel-featured-left panel-featured-primary">
-                          <div class="panel-body">
+                        <section class="panel">
+                          <div class="panel-body"
+                            style="background-color:#daeba6; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                             <div class="widget-summary">
-                              <div class="widget-summary-col widget-summary-col-icon">
-                                <div class="summary-icon bg-primary">
-                                  <i class="fa fa-barcode"></i>
+                              <div clwass="widget-summary-col widget-summary-col-icon sm">
+                                <div class="summary-icon bg-default" style="color:#000 ;">
+                                  <img src="<?php echo base_url() ?>/assets/images/icons/debt.png"
+                                    style="height:60px; width:60px" alt="">
                                 </div>
                               </div>
                               <div class="widget-summary-col">
@@ -297,17 +308,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 </div>
                               </div>
                             </div>
-                          </div>
                         </section>
                       </div>
-
                       <div class="col-md-12 col-lg-6 col-xl-6">
-                        <section class="panel panel-featured-left panel-featured-tertiary">
-                          <div class="panel-body">
+                        <section class="panel">
+                          <div class="panel-body"
+                            style="background-color:#daeba6; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                             <div class="widget-summary">
-                              <div class="widget-summary-col widget-summary-col-icon">
-                                <div class="summary-icon bg-tertiary">
-                                  <i class="fa fa-barcode"></i>
+                              <div clwass="widget-summary-col widget-summary-col-icon sm">
+                                <div class="summary-icon bg-default" style="color:#000 ;">
+                                  <img src="<?php echo base_url() ?>/assets/images/icons/debt.png"
+                                    style="height:60px; width:60px" alt="">
                                 </div>
                               </div>
                               <div class="widget-summary-col">
@@ -322,7 +333,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                           </div>
                         </section>
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -352,8 +362,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                       </div>
                     </section>
                     <section class="panel">
-                      <header class="panel-heading">
-                        <h2 class="panel-title">Produk akan Kadaluarsa</h2>
+                      <header class="panel-heading" style="background-color:#ef4040 ;">
+                        <h2 class="panel-title" style="color:#ffffff ;">Produk akan Kadaluarsa</h2>
                       </header>
                       <div class="panel-body">
                         <div class="table-responsive">
