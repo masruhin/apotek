@@ -165,7 +165,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                       <div class="col-md-12 col-lg-6 col-xl-6">
                         <section class="panel">
                           <div class="panel-body"
-                            style="background-color:#daeba6; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
+                            style="background-color:#daeba6; border-radius:40px;box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11);">
                             <div class="widget-summary">
                               <div clwass="widget-summary-col widget-summary-col-icon sm">
                                 <div class="summary-icon bg-default" style="color:#000; background-color:#ffffff;">
@@ -189,7 +189,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                       <div class="col-md-12 col-lg-6 col-xl-6">
                         <section class="panel">
                           <div class="panel-body"
-                            style="background-color:#daeba6; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
+                            style="background-color:#daeba6; border-radius:40px;box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11);">
                             <div class="widget-summary">
                               <div clwass="widget-summary-col widget-summary-col-icon sm">
                                 <div class="summary-icon bg-default" style="color:#000; background-color:#ffffff;">
@@ -220,7 +220,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <div class="row">
                           <div class="col-md-6 col-xl-12">
                             <section class="panel">
-                              <div class="panel-body bg-primary" style="background-color:#1fa5bb ;">
+                              <div class="panel-body bg-primary"
+                                style="background-color:#1fa5bb; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                                 <div class="widget-summary">
                                   <div class="widget-summary-col">
                                     <div class="summary">
@@ -236,71 +237,49 @@ defined('BASEPATH') or exit('No direct script access allowed');
                           </div>
                           <div class="col-md-6 col-xl-12">
                             <section class="panel">
-                              <div class="panel-body bg-primary" style="background-color:#1fa5bb ;">
-                                <div class="widget-summary">
-                                  <div class="widget-summary-col">
-                                    <div class="summary">
-                                      <h4 class="title">Hutang Akan Jatuh Tempo</h4>
-                                      <div class="info">
-                                        <strong class="amount" id="akan_jatuh_tempo"></strong>
-                                      </div>
+                              <div class="panel-body bg-primary"
+                                style="background-color:#1fa5bb ;border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)"">
+                                <div class=" widget-summary">
+                                <div class="widget-summary-col">
+                                  <div class="summary">
+                                    <h4 class="title">Hutang Akan Jatuh Tempo</h4>
+                                    <div class="info">
+                                      <strong class="amount" id="akan_jatuh_tempo"></strong>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                            </section>
                           </div>
-                          <div class="col-md-6 col-xl-12">
-                            <section class="panel">
-                              <div class="panel-body bg-primary" style="background-color:#1fa5bb ;">
-                                <div class="widget-summary">
-                                  <div class="widget-summary-col">
-                                    <div class="summary">
-                                      <h4 class="title">Hutang Sudah Jatuh Tempo</h4>
-                                      <div class="info">
-                                        <strong class="amount" id="sudah_jatuh_tempo"></strong>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </section>
-                          </div>
-                          <div class="col-md-6 col-xl-12">
-                            <section class="panel">
-                              <div class="panel-body bg-primary" style="background-color:#1fa5bb ;">
-                                <div class="widget-summary">
-                                  <div class="widget-summary-col">
-                                    <div class="summary">
-                                      <h4 class="title">Sudah Dibayar Minggu Ini</h4>
-                                      <div class="info">
-                                        <strong class="amount" id="dibayar_minggu_ini"></strong>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </section>
+                </section>
+              </div>
+              <div class="col-md-1"></div>
+              <div class="col-md-5 col-xl-12">
+                <section class="panel">
+                  <div class="panel-body bg-primary"
+                    style="background-color:#1fa5bb; border-radius:40px;box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11);">
+                    <div class="widget-summary">
+                      <div class="widget-summary-col">
+                        <div class="summary">
+                          <h4 class="title">Hutang Sudah Jatuh Tempo</h4>
+                          <div class="info">
+                            <strong class="amount" id="sudah_jatuh_tempo"></strong>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </section>
+              </div>
+              <div class="col-md-5 col-xl-12">
                 <section class="panel">
-                  <div class="panel-body">
-                    <div class="row">
-                      <div class="col-md-9 col-lg-12 col-xl-4">
-                        <div class="row">
-                          <div class="col-md-12 col-xl-12">
-                            <section class="panel">
-                              <header class="panel-heading">
-                                <h2 class="panel-title">Pemasukan dan Pengeluaran 2 Minggu Terakhir</h2>
-                              </header>
-                              <div class="panel-body">
-                                <div class="chart chart-md" id="GrafikCash"></div>
-                              </div>
-                            </section>
+                  <div class="panel-body bg-primary"
+                    style="background-color:#1fa5bb; border-radius:40px;box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11);">
+                    <div class="widget-summary">
+                      <div class="widget-summary-col">
+                        <div class="summary">
+                          <h4 class="title">Sudah Dibayar Minggu Ini</h4>
+                          <div class="info">
+                            <strong class="amount" id="dibayar_minggu_ini"></strong>
                           </div>
                         </div>
                       </div>
@@ -309,10 +288,36 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </section>
               </div>
             </div>
-          </section>
-          <!-- end: page -->
-        </section>
       </div>
+      </div>
+      </div>
+    </section>
+    <section class="panel">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-9 col-lg-12 col-xl-4">
+            <div class="row">
+              <div class="col-md-12 col-xl-12">
+                <section class="panel">
+                  <header class="panel-heading">
+                    <h2 class="panel-title">Pemasukan dan Pengeluaran 2 Minggu Terakhir</h2>
+                  </header>
+                  <div class="panel-body">
+                    <div class="chart chart-md" id="GrafikCash"></div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+    </div>
+    </section>
+    <!-- end: page -->
+    </section>
+    </div>
 
     </section>
 
