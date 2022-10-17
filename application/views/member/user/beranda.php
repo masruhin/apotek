@@ -61,7 +61,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                           <ul class="mg-folders">
                             <li>
                               <a href="<?php echo base_url() ?>user/kategori" class="menu-item"><i
-                                  class="fa fa-folder"></i> Kategori Pengguna </a>
+                                  class="fa fa-asterisk"></i> Kategori Pengguna </a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>user/kategori">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -69,8 +69,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                               </div>
                             </li>
                             <li>
-                              <a href="<?php echo base_url() ?>user/user" class="menu-item"><i class="fa fa-folder"></i>
-                                Pengguna</a>
+                              <a href="<?php echo base_url() ?>user/user" class="menu-item"><i
+                                  class="fa fa-asterisk"></i>
+                                Data Pengguna</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>user/user">
                                   <i class="fa fa-arrow-circle-o-left"></i>

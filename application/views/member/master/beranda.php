@@ -67,7 +67,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                           <ul class="mg-folders">
                             <li>
                               <a href="<?php echo base_url() ?>master/dokter" class="menu-item"><i
-                                  class="fa fa-folder"></i> Data Dokter</a>
+                                  class="fa fa-asterisk"></i> Data Dokter / Apoteker</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>master/dokter">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -76,7 +76,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </li>
                             <li>
                               <a href="<?php echo base_url() ?>master/pembeli" class="menu-item"><i
-                                  class="fa fa-folder"></i> Data Pembeli</a>
+                                  class="fa fa-asterisk"></i> Data Pembeli</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>master/pembeli">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -85,7 +85,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </li>
                             <li>
                               <a href="<?php echo base_url() ?>master/supplier" class="menu-item"><i
-                                  class="fa fa-folder"></i> Data Supplier</a>
+                                  class="fa fa-asterisk"></i> Data Supplier</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>master/supplier">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -94,7 +94,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </li>
                             <li>
                               <a href="<?php echo base_url() ?>master/itemkategori" class="menu-item"><i
-                                  class="fa fa-folder"></i> Data Kategori Item</a>
+                                  class="fa fa-asterisk"></i> Data Kategori Item</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>master/itemkategori">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -103,7 +103,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </li>
                             <li>
                               <a href="<?php echo base_url() ?>master/satuan" class="menu-item"><i
-                                  class="fa fa-folder"></i> Data Satuan Item</a>
+                                  class="fa fa-asterisk"></i> Data Satuan Item</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>master/satuan">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -112,7 +112,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </li>
                             <li>
                               <a href="<?php echo base_url() ?>master/merk" class="menu-item"><i
-                                  class="fa fa-folder"></i> Data Merk</a>
+                                  class="fa fa-asterisk"></i> Data Merk</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>master/merk">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -121,7 +121,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </li>
                             <li>
                               <a href="<?php echo base_url() ?>master/items" class="menu-item"><i
-                                  class="fa fa-folder"></i> Data Obat dan Alkes</a>
+                                  class="fa fa-asterisk"></i> Data Obat dan Alkes</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>master/items">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -130,7 +130,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </li>
                             <li>
                               <a href="<?php echo base_url() ?>master/racikan" class="menu-item"><i
-                                  class="fa fa-folder"></i> Data Racikan</a>
+                                  class="fa fa-asterisk"></i> Data Racikan</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>master/racikan">
                                   <i class="fa fa-arrow-circle-o-left"></i>

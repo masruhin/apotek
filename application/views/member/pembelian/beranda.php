@@ -45,7 +45,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <div class="content-with-menu-container">
               <div class="inner-menu-toggle">
                 <a href="#" class="inner-menu-expand" data-open="inner-menu">
-                  Show Bar <i class="fa fa-chevron-right"></i>
+                  Show Bar
+                  <i class="fa fa-chevron-right"></i>
                 </a>
               </div>
               <menu id="content-menu" class="inner-menu" role="menu">
@@ -54,11 +55,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                     <div class="inner-menu-toggle-inside">
                       <a href="#" class="inner-menu-collapse">
-                        <i class="fa fa-chevron-up visible-xs-inline"></i><i
-                          class="fa fa-chevron-left hidden-xs-inline"></i> Hide Bar
+                        <i class="fa fa-chevron-up visible-xs-inline"></i>
+                        <i class="fa fa-chevron-left hidden-xs-inline"></i>
+                        Hide Bar
                       </a>
                       <a href="#" class="inner-menu-expand" data-open="inner-menu">
-                        Show Bar <i class="fa fa-chevron-down"></i>
+                        Show Bar
+                        <i class="fa fa-chevron-down"></i>
                       </a>
                     </div>
 
@@ -68,8 +71,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <div class="widget-content">
                           <ul class="mg-folders">
                             <li>
-                              <a href="<?php echo base_url() ?>pembelian/po" class="menu-item"><i
-                                  class="fa fa-folder"></i> Purchase Order</a>
+                              <a href="<?php echo base_url() ?>pembelian/po" class="menu-item">
+                                <i class="fa fa-asterisk"></i>
+                                Purchase Order</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>pembelian/po">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -77,8 +81,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                               </div>
                             </li>
                             <li>
-                              <a href="<?php echo base_url() ?>pembelian/langsung" class="menu-item"><i
-                                  class="fa fa-folder"></i> Pembelian / Faktur</a>
+                              <a href="<?php echo base_url() ?>pembelian/langsung" class="menu-item">
+                                <i class="fa fa-asterisk"></i>
+                                Pembelian / Faktur</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>pembelian/langsung">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -86,8 +91,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                               </div>
                             </li>
                             <li>
-                              <a href="<?php echo base_url() ?>pembelian/penerimaan" class="menu-item"><i
-                                  class="fa fa-folder"></i> Penerimaan Barang</a>
+                              <a href="<?php echo base_url() ?>pembelian/penerimaan" class="menu-item">
+                                <i class="fa fa-asterisk"></i>
+                                Penerimaan Barang</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>pembelian/penerimaan">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -95,8 +101,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                               </div>
                             </li>
                             <li>
-                              <a href="<?php echo base_url() ?>pembelian/retur" class="menu-item"><i
-                                  class="fa fa-folder"></i> Retur Pembelian</a>
+                              <a href="<?php echo base_url() ?>pembelian/retur" class="menu-item">
+                                <i class="fa fa-asterisk"></i>
+                                Retur Pembelian</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>pembelian/retur">
                                   <i class="fa fa-arrow-circle-o-left"></i>
@@ -131,7 +138,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 <div class="summary">
                                   <h4 class="title">Jumlah Purchase Order</h4>
                                   <div class="info">
-                                    <strong class="amount"><?php echo $total_po; ?> PO</strong>
+                                    <strong class="amount"><?php echo $total_po; ?>
+                                      PO</strong>
                                   </div>
                                 </div>
                               </div>
@@ -154,7 +162,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 <div class="summary">
                                   <h4 class="title">Jumlah Pembelian</h4>
                                   <div class="info">
-                                    <strong class="amount"><?php echo $total_pembelian; ?> Transaksi</strong>
+                                    <strong class="amount"><?php echo $total_pembelian; ?>
+                                      Transaksi</strong>
                                   </div>
                                 </div>
                               </div>
@@ -177,7 +186,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 <div class="summary">
                                   <h4 class="title">Jumlah Penerimaan</h4>
                                   <div class="info">
-                                    <strong class="amount"><?php echo $total_penerimaan; ?> Penerimaan</strong>
+                                    <strong class="amount"><?php echo $total_penerimaan; ?>
+                                      Penerimaan</strong>
                                   </div>
                                 </div>
                               </div>
@@ -201,7 +211,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 <div class="summary">
                                   <h4 class="title">Jumlah Retur Pembelian</h4>
                                   <div class="info">
-                                    <strong class="amount"><?php echo $total_retur; ?> Retur</strong>
+                                    <strong class="amount"><?php echo $total_retur; ?>
+                                      Retur</strong>
                                   </div>
                                 </div>
                               </div>
@@ -238,8 +249,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                           <div class="col-md-6 col-xl-12">
                             <section class="panel">
                               <div class="panel-body bg-primary"
-                                style="background-color:#1fa5bb ;border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)"">
-                                <div class=" widget-summary">
+                                style="background-color:#1fa5bb ;border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)" ">
+                                                                <div class=" widget-summary">
                                 <div class="widget-summary-col">
                                   <div class="summary">
                                     <h4 class="title">Hutang Akan Jatuh Tempo</h4>
@@ -321,7 +332,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
     </section>
 
-
     <!-- Vendor -->
     <script src="<?php echo base_url() ?>assets/vendor/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url() ?>assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
@@ -346,19 +356,27 @@ defined('BASEPATH') or exit('No direct script access allowed');
           element: 'GrafikCash',
           data: response,
           xkey: 'tanggal',
-          ykeys: ['masuk', 'keluar'],
-          labels: ['Uang Masuk (Rp) ', 'Uang Keluar (Rp) '],
+          ykeys: [
+            'masuk', 'keluar'
+          ],
+          labels: [
+            'Uang Masuk (Rp) ', 'Uang Keluar (Rp) '
+          ],
           hideHover: true,
-          lineColors: ['#0088cc', '#734ba9'],
+          lineColors: [
+            '#0088cc', '#734ba9'
+          ],
           xLabelFormat: function(d) {
-            return ("0" + d.getDate()).slice(-2) + '-' + ("0" + (d.getMonth() + 1)).slice(-2) + '-' + d
-              .getFullYear();
+            return ("0" + d.getDate()).slice(-2) + '-' + (
+              "0" + (
+                d.getMonth() + 1
+              )
+            ).slice(-2) + '-' + d.getFullYear();
           },
-          xLabelAngle: 45,
+          xLabelAngle: 45
         });
       }
     });
-
 
     $.ajax({
       url: '<?php echo base_url() ?>dashboard/laporan_ringkas', // getchart.php
