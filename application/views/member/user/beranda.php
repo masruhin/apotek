@@ -288,7 +288,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
           ykeys: ['masuk', 'keluar'],
           labels: ['Uang Masuk (Rp) ', 'Uang Keluar (Rp) '],
           hideHover: true,
-          lineColors: ['#0088cc', '#734ba9'],
+          lineColors: ['#91bf06', '#bd2d0d'],
           xLabelFormat: function(d) {
             return ("0" + d.getDate()).slice(-2) + '-' + ("0" + (d.getMonth() + 1)).slice(-2) + '-' + d
               .getFullYear();
@@ -375,7 +375,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
           ykeys: ['jumlah'],
           labels: ['Jumlah Transaksi'],
           hideHover: true,
-          lineColors: ['#0088cc'],
+          lineColors: ['#91bf06'],
           xLabelFormat: function(d) {
             return ("0" + d.getDate()).slice(-2) + '-' + ("0" + (d.getMonth() + 1)).slice(-2) + '-' + d
               .getFullYear();

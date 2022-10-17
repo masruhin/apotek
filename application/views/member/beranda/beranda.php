@@ -549,7 +549,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
           ykeys: ['jumlah'],
           labels: ['Jumlah Transaksi'],
           hideHover: true,
-          lineColors: ['#000'],
+          lineColors: ['#91bf06'],
           xLabelFormat: function(d) {
             return ("0" + d.getDate()).slice(-2) + '-' + (
               "0" + (

@@ -303,7 +303,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
           ],
           hideHover: true,
           lineColors: [
-            '#0088cc', '#734ba9'
+            '#91bf06', '#bd2d0d'
           ],
           xLabelFormat: function(d) {
             return ("0" + d.getDate()).slice(-2) + '-' + (
@@ -396,7 +396,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
           ykeys: ['jumlah'],
           labels: ['Jumlah Transaksi'],
           hideHover: true,
-          lineColors: ['#0088cc'],
+          lineColors: ['#91bf06'],
           xLabelFormat: function(d) {
             return ("0" + d.getDate()).slice(-2) + '-' + (
               "0" + (

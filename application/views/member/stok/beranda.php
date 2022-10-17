@@ -302,7 +302,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
           ],
           hideHover: true,
           lineColors: [
-            '#0088cc', '#734ba9'
+            '#91bf06', '#bd2d0d'
           ],
           xLabelFormat: function(d) {
             return ("0" + d.getDate()).slice(-2) + '-' + (
