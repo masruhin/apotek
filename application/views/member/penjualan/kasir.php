@@ -144,11 +144,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </ul>
                   </div>
                 </div>
-                <div class="input-group mb-md">
-                  <span class="input-group-addon btn-primary"><i class="fa fa-barcode"></i></span>
+                <!-- <div class="input-group mb-md">
+                  <span class="input-group-addon btn-primary"><i class="glyphicon glyphicon-barcode"></i></span>
                   <input type="text" class="form-control" onkeyup="barcode(this)" id="barcode"
                     placeholder="Barcode Scan">
-                </div>
+                </div> -->
               </div>
             </section>
             <br />
@@ -192,10 +192,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
               <div class="panel-body">
                 <div class="row">
                   <div class="col-md-4">
-                    <a class="btn icon-btn btn-danger"
+                    <a class="btn icon-btn btn-lg btn-danger"
                       style="padding: 1px 15px 3px 2px;border-radius:50px; margin-top: 10px; " data-toggle="modal"
                       data-target="#modalHapus" id="canceltransaksi" disabled="disabled">
-                      <span class="glyphicon btn-glyphicon glyphicon-refresh img-circle text-info"
+                      <span class="glyphicon btn-glyphicon glyphicon-ban-circle img-circle text-info"
                         style="padding:8px;background:#ffffff;margin-right:4px;" disabled="disabled"></span>
                       Batal
                     </a>
@@ -204,10 +204,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </button> -->
                   </div>
                   <div class="col-md-4">
-                    <a class="btn icon-btn btn-warning"
+                    <a class="btn icon-btn btn-lg btn-warning"
                       style="padding: 1px 15px 3px 2px;border-radius:50px; margin-top: 10px; " data-toggle="modal"
                       data-target="#modalHold" id="holdtransaksi" disabled="disabled">
-                      <span class="glyphicon btn-glyphicon glyphicon-ban-circle img-circle text-danger"
+                      <span class="glyphicon btn-glyphicon glyphicon-refresh img-circle text-danger"
                         style="padding:8px;background:#ffffff;margin-right:4px;" disabled="disabled"></span>
                       Hold
                     </a>
@@ -215,7 +215,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                       data-target="#modalHold" id="holdtransaksi" disabled="disabled">Hold</button> -->
                   </div>
                   <div class="col-md-4">
-                    <a class="btn icon-btn btn-success"
+                    <a class="btn icon-btn btn-lg btn-success"
                       style="padding: 1px 15px 3px 2px;border-radius:50px; margin-top: 10px; " data-toggle="modal"
                       data-target="#modal-payment" id="paymenttransaksi" disabled="disabled">
                       <span class="glyphicon btn-glyphicon glyphicon-ok img-circle text-info"
@@ -233,14 +233,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <section class="panel-featured-right panel-featured-primary">
               <div class="panel-body">
                 <div class="input-group mb-md">
-                  <input type="text" class="form-control" id="keywords" placeholder="Search Product Keyword"
+                  <input type="text" class="form-control" id="keywords" placeholder="Cari Produk"
                     onkeyup="searchFilter()">
                   <a class="input-group-addon btn-primary btn"><i class="fa fa-search"></i></a>
-                  <select id="sortBy" onchange="searchFilter()" class="form-control">
+                  <!-- <select id="sortBy" onchange="searchFilter()" class="form-control">
                     <option value="">Sort By</option>
                     <option value="asc">Ascending</option>
                     <option value="desc">Descending</option>
-                  </select>
+                  </select> -->
                 </div>
 
                 <div class="row mg-files" id="postList" style="max-height: 500px;overflow-y: scroll;">
