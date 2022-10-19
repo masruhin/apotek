@@ -218,7 +218,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <a class="btn icon-btn btn-lg btn-success"
                       style="padding: 1px 15px 3px 2px;border-radius:50px; margin-top: 10px; " data-toggle="modal"
                       data-target="#modal-payment" id="paymenttransaksi" disabled="disabled">
-                      <span class="glyphicon btn-glyphicon glyphicon-ok img-circle text-info"
+                      <span class="glyphicon btn-glyphicon glyphicon-credit-card img-circle text-info"
                         style="padding:8px;background:#ffffff;margin-right:4px;" disabled="disabled"></span>
                       Bayar
                     </a>
