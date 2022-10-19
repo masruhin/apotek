@@ -84,7 +84,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             <li>
                               <a href="<?php echo base_url() ?>penjualan/kasir" class="menu-item">
                                 <i class="fa fa-asterisk"></i>
-                                Point Of Sales / Kasir</a>
+                                Menu Kasir</a>
                               <div class="item-options">
                                 <a href="<?php echo base_url() ?>penjualan/kasir">
                                   <i class="fa fa-arrow-circle-o-left"></i>

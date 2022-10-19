@@ -81,9 +81,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		        </li> 
 			-->
             <li>
-              <a href="#" data-toggle="modal" data-target="#modal-hold" type="button"
+              <a href="#" data-toggle="modal" data-target="#modal-hold" type="button" class="btn icon-btn btn-info"
+                style="padding: 1px 15px 3px 2px;border-radius:50px;">
+                <span class="glyphicon btn-glyphicon glyphicon-paperclip img-circle text-info"
+                  style="padding:8px;background:#ffffff;margin-right:4px;"></span>
+                Data Hold
+              </a>
+              <!-- <a href="#" data-toggle="modal" data-target="#modal-hold" type="button"
                 class="mb-xs mt-xs mr-xs btn btn-primary">
-                <i class="fa  fa-list"></i> Data Hold</a>
+                <i class="fa  fa-list"></i> Data Hold</a> -->
             </li>
           </ul>
 
@@ -186,16 +192,38 @@ defined('BASEPATH') or exit('No direct script access allowed');
               <div class="panel-body">
                 <div class="row">
                   <div class="col-md-4">
-                    <button type="button" class="mb-xs mt-xs mr-xs btn btn-danger btn-lg btn-block" data-toggle="modal"
-                      data-target="#modalHapus" id="canceltransaksi" disabled="disabled">Cancel</button>
+                    <a class="btn icon-btn btn-danger"
+                      style="padding: 1px 15px 3px 2px;border-radius:50px; margin-top: 10px; " data-toggle="modal"
+                      data-target="#modalHapus" id="canceltransaksi" disabled="disabled">
+                      <span class="glyphicon btn-glyphicon glyphicon-refresh img-circle text-info"
+                        style="padding:8px;background:#ffffff;margin-right:4px;" disabled="disabled"></span>
+                      Batal
+                    </a>
+                    <!-- <button type="button" class="mb-xs mt-xs mr-xs btn btn-danger btn-lg btn-block" data-toggle="modal"
+                      data-target="#modalHapus" id="canceltransaksi" disabled="disabled">Batal
+                    </button> -->
                   </div>
                   <div class="col-md-4">
-                    <button type="button" class="mb-xs mt-xs mr-xs btn btn-warning btn-lg btn-block" data-toggle="modal"
-                      data-target="#modalHold" id="holdtransaksi" disabled="disabled">Hold</button>
+                    <a class="btn icon-btn btn-warning"
+                      style="padding: 1px 15px 3px 2px;border-radius:50px; margin-top: 10px; " data-toggle="modal"
+                      data-target="#modalHold" id="holdtransaksi" disabled="disabled">
+                      <span class="glyphicon btn-glyphicon glyphicon-ban-circle img-circle text-danger"
+                        style="padding:8px;background:#ffffff;margin-right:4px;" disabled="disabled"></span>
+                      Hold
+                    </a>
+                    <!-- <button type="button" class="mb-xs mt-xs mr-xs btn btn-warning btn-lg btn-block" data-toggle="modal"
+                      data-target="#modalHold" id="holdtransaksi" disabled="disabled">Hold</button> -->
                   </div>
                   <div class="col-md-4">
-                    <button type="button" class="mb-xs mt-xs mr-xs btn btn-primary btn-lg btn-block" data-toggle="modal"
-                      data-target="#modal-payment" id="paymenttransaksi" disabled="disabled">Payment</button>
+                    <a class="btn icon-btn btn-success"
+                      style="padding: 1px 15px 3px 2px;border-radius:50px; margin-top: 10px; " data-toggle="modal"
+                      data-target="#modal-payment" id="paymenttransaksi" disabled="disabled">
+                      <span class="glyphicon btn-glyphicon glyphicon-ok img-circle text-info"
+                        style="padding:8px;background:#ffffff;margin-right:4px;" disabled="disabled"></span>
+                      Bayar
+                    </a>
+                    <!-- <button type="button" class="mb-xs mt-xs mr-xs btn btn-primary btn-lg btn-block" data-toggle="modal"
+                      data-target="#modal-payment" id="paymenttransaksi" disabled="disabled">Bayar</button> -->
                   </div>
                 </div>
               </div>
@@ -237,17 +265,27 @@ defined('BASEPATH') or exit('No direct script access allowed');
                           </span>
                         </div>
                       </div>
-                      <div class="row">
+                      <div class="row center">
                         <div class="col-md-12">
-                          <a id="beli-item<?php echo $post['kode_item']; ?>" class="btn btn-xs btn-primary"
-                            onclick="beli(this)" data-barcode="<?php echo $post['kode_item']; ?>"><i
-                              class="fa fa-shopping-cart"></i> Beli Produk</a>
+                          <a id="beli-item<?php echo $post['kode_item']; ?>" onclick="beli(this)"
+                            data-barcode="<?php echo $post['kode_item']; ?>" class="btn icon-btn btn-info"
+                            style="padding: 1px 15px 3px 2px;border-radius:50px; margin-top: 10px; ">
+                            <span class="glyphicon btn-glyphicon glyphicon-share img-circle text-info"
+                              style="padding:8px;background:#ffffff;margin-right:4px;"></span>
+                            Jual
+                          </a>
+                          <!-- <a id="beli-item<?php echo $post['kode_item']; ?>" class="btn btn-md btn-success"
+                            onclick="beli(this)" data-barcode="<?php echo $post['kode_item']; ?>"
+                            style="border-radius:50% ;">
+                            <i class="fa fa-shopping-cart"></i>
+                            Beli Produk
+                          </a> -->
                         </div>
                       </div>
                     </div>
                   </div>
                   <?php endforeach;
-								else : ?>
+                else : ?>
                   <div class="col-sm-12 col-md-12 col-lg-12">
                     <p>Product not available.</p>
                   </div>
