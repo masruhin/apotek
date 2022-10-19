@@ -249,7 +249,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <?php if (!empty($posts)) : foreach ($posts as $post) : ?>
 
                   <div class="col-sm-12 col-md-3 col-lg-3">
-                    <div class="thumbnail">
+                    <div class="thumbnail"
+                      style="  background:#fff;padding:15px;border-radius:6px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);position:relative;margin:20px auto;">
                       <div class="thumb-preview">
                         <img src="<?php echo base_url() ?>/images/<?php echo $post['gambar']; ?>"
                           class="img-responsive fit-image" alt="Foto Produk">

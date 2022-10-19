@@ -5,9 +5,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <header class="header">
   <div class="logo-container">
     <a href="<?php echo base_url() ?>" class="logo">
-      <img src="<?php echo base_url() ?>assets/images/<?php echo $this->db->get_where('profil_apotek', array('id' => '1'), 1)->row()->logo; ?>" height="35" alt="Logo" />
+      <img
+        src="<?php echo base_url() ?>assets/images/<?php echo $this->db->get_where('profil_apotek', array('id' => '1'), 1)->row()->logo; ?>"
+        height="35" alt="Logo" />
     </a>
-    <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+    <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html"
+      data-fire-event="sidebar-left-opened">
       <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
     </div>
   </div>
@@ -15,10 +18,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
   <div class="header-right">
     <ul class="notifications">
       <li>
-        <a href="<?php echo base_url() ?>penjualan/kasir" type="button" class="mb-xs mt-xs mr-xs btn btn-primary" style="background-color:#0dbdb5 ;">
+        <a href="<?php echo base_url() ?>penjualan/kasir" class="btn icon-btn btn-lg btn-success"
+          style="padding: 1px 15px 3px 2px;border-radius:50px;">
+          <span class="glyphicon btn-glyphicon glyphicon-shopping-cart img-circle text-info"
+            style="padding:8px;background:#ffffff;margin-right:4px;" disabled="disabled"></span>
+          Menu Kasir
+        </a>
+        <!-- <a href="<?php echo base_url() ?>penjualan/kasir" type="button" class="mb-xs mt-xs mr-xs btn btn-primary" style="background-color:#0dbdb5 ;">
           <i class="fa  fa-shopping-cart">
           </i> Menu Kasir
-        </a>
+        </a> -->
       </li>
     </ul>
 
