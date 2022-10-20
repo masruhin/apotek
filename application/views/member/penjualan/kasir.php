@@ -18,6 +18,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link rel="stylesheet"
       href="<?php echo base_url() ?>/assets/vendor/jquery-datatables-bs3/assets/css/datatables.css" />
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/theme.css" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/thumbnail.css" />
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/skins/default.css" />
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/theme-custom.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/pnotify/pnotify.custom.css" />
@@ -181,7 +182,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <th style="text-align: left;">Sub Total</th>
                     <th style="text-align: right;">Rp 0</th>
                   </tr>
-                  <tr class="primary">
+                  <tr class="" style="background-color:#000 ;">
                     <th style="text-align: left;">Total</th>
                     <th style="text-align: right;">Rp 0</th>
                   </tr>
@@ -215,7 +216,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                       data-target="#modalHold" id="holdtransaksi" disabled="disabled">Hold</button> -->
                   </div>
                   <div class="col-md-4">
-                    <a class="btn icon-btn btn-lg btn-success"
+                    <a class="btn icon-btn btn-lg btn-info"
                       style="padding: 1px 15px 3px 2px;border-radius:50px; margin-top: 10px; " data-toggle="modal"
                       data-target="#modal-payment" id="paymenttransaksi" disabled="disabled">
                       <span class="glyphicon btn-glyphicon glyphicon-credit-card img-circle text-info"
@@ -250,7 +251,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                   <div class="col-sm-12 col-md-3 col-lg-3">
                     <div class="thumbnail"
-                      style="  background:#fff;padding:15px;border-radius:6px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);position:relative;margin:20px auto;">
+                      style="padding:15px;border-radius:6px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);position:relative;margin:20px auto;  box-shadow:12px 12px 16px 0 rgba(0, 0, 0, 0.25),-8px -8px 12px 0 rgba(255, 255, 255, 0.3);">
                       <div class="thumb-preview">
                         <img src="<?php echo base_url() ?>/images/<?php echo $post['gambar']; ?>"
                           class="img-responsive fit-image" alt="Foto Produk">
@@ -269,8 +270,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                       <div class="row center">
                         <div class="col-md-12">
                           <a id="beli-item<?php echo $post['kode_item']; ?>" onclick="beli(this)"
-                            data-barcode="<?php echo $post['kode_item']; ?>" class="btn icon-btn btn-info"
-                            style="padding: 1px 15px 3px 2px;border-radius:50px; margin-top: 10px; ">
+                            data-barcode="<?php echo $post['kode_item']; ?>" class="btn icon-btn btn-info" style="padding: 1px 15px 3px 2px;border-radius:50px; margin-top: 10px;  box-shadow: 
+    12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
+    -8px -8px 12px 0 rgba(0, 0, 0, .25) inset; ">
                             <span class="glyphicon btn-glyphicon glyphicon-share img-circle text-info"
                               style="padding:8px;background:#ffffff;margin-right:4px;"></span>
                             Jual

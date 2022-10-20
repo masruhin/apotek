@@ -1,6 +1,7 @@
 <?php if (!empty($posts)) : foreach ($posts as $post) : ?>
 <div class="col-sm-12 col-md-3 col-lg-3">
-  <div class="thumbnail">
+  <div class="thumbnail"
+    style="padding:15px;border-radius:6px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);position:relative;margin:20px auto;  box-shadow:12px 12px 16px 0 rgba(0, 0, 0, 0.25),-8px -8px 12px 0 rgba(255, 255, 255, 0.3);">
     <div class="thumb-preview">
       <img src="<?php echo base_url() ?>/images/<?php echo $post['gambar']; ?>" class="img-responsive fit-image"
         alt="Foto Produk">
@@ -18,10 +19,11 @@
     <div class="row center">
       <div class="col-md-12">
         <a id="beli-item<?php echo $post['kode_item']; ?>" onclick="beli(this)"
-          data-barcode="<?php echo $post['kode_item']; ?>" class="btn icon-btn btn-info"
-          style="padding: 1px 15px 3px 2px;border-radius:50px; margin-top: 10px; ">
+          data-barcode="<?php echo $post['kode_item']; ?>" class="btn icon-btn btn-info" style="padding: 1px 15px 3px 2px;border-radius:50px; margin-top: 10px;  box-shadow: 
+    12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
+    -8px -8px 12px 0 rgba(0, 0, 0, .25) inset; ">
           <span class="glyphicon btn-glyphicon glyphicon-share img-circle text-info"
-            style="padding:8px;background:#ffffff;margin-right:4px;"></span>
+            style="padding:8px;background:#ffffff;margin-right:4px; "></span>
           Jual
         </a>
         <!-- <a class="btn btn-xs btn-primary" id="beli-item<?php echo $post['kode_item']; ?>" onclick="beli(this)"
@@ -33,7 +35,7 @@
 <?php endforeach;
 else : ?>
 <div class="col-sm-12 col-md-12 col-lg-12">
-  <p>Product not available.</p>
+  <p>Produk tidak tersedia.</p>
 </div>
 <?php endif; ?>
 <div class="col-sm-12 col-md-12 col-lg-12">
