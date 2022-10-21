@@ -83,7 +83,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			-->
             <li>
               <a href="#" data-toggle="modal" data-target="#modal-hold" type="button" class="btn icon-btn btn-info"
-                style="padding: 1px 15px 3px 2px;border-radius:50px;">
+                style="padding: 1px 15px 3px 2px;border-radius:50px;box-shadow:  -2px -2px 8px 4px white, 2px 2px 8px 4px #222;">
                 <span class="glyphicon btn-glyphicon glyphicon-paperclip img-circle text-info"
                   style="padding:8px;background:#ffffff;margin-right:4px;"></span>
                 Data Hold

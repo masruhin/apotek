@@ -18,8 +18,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
   <div class="header-right">
     <ul class="notifications">
       <li>
-        <a href="<?php echo base_url() ?>penjualan/kasir" class="btn icon-btn btn-lg btn-success"
-          style="padding: 1px 15px 3px 2px;border-radius:50px;">
+        <a href="<?php echo base_url() ?>penjualan/kasir" class="btn icon-btn btn-lg btn-info"
+          style="padding: 1px 15px 3px 2px;border-radius:50px;box-shadow:  -2px -2px 8px 4px white, 2px 2px 8px 4px #222;">
           <span class="glyphicon btn-glyphicon glyphicon-shopping-cart img-circle text-info"
             style="padding:8px;background:#ffffff;margin-right:4px;" disabled="disabled"></span>
           Menu Kasir
