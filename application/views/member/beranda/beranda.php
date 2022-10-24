@@ -166,7 +166,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
               </div>
             </div>
           </section>
-
           <!-- <section class="panel" style="box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
             <div class="panel-body">
               <div class="row">
