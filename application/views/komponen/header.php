@@ -24,10 +24,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
             style="padding:8px;background:#ffffff;margin-right:4px;" disabled="disabled"></span>
           Menu Kasir
         </a>
-        <!-- <a href="<?php echo base_url() ?>penjualan/kasir" type="button" class="mb-xs mt-xs mr-xs btn btn-primary" style="background-color:#0dbdb5 ;">
-          <i class="fa  fa-shopping-cart">
-          </i> Menu Kasir
-        </a> -->
       </li>
     </ul>
 

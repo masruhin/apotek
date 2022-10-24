@@ -194,37 +194,30 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <div class="row">
                   <div class="col-md-4">
                     <a class="btn icon-btn btn-lg btn-danger"
-                      style="padding: 1px 15px 3px 2px;border-radius:50px; margin-top: 10px; " data-toggle="modal"
-                      data-target="#modalHapus" id="canceltransaksi" disabled="disabled">
+                      style="padding: 1px 15px 3px 2px;border-radius:50px;box-shadow:  -2px -2px 8px 4px white, 2px 2px 8px 4px #222; margin-top: 10px; "
+                      data-toggle="modal" data-target="#modalHapus" id="canceltransaksi" disabled="disabled">
                       <span class="glyphicon btn-glyphicon glyphicon-ban-circle img-circle text-info"
                         style="padding:8px;background:#ffffff;margin-right:4px;" disabled="disabled"></span>
                       Batal
                     </a>
-                    <!-- <button type="button" class="mb-xs mt-xs mr-xs btn btn-danger btn-lg btn-block" data-toggle="modal"
-                      data-target="#modalHapus" id="canceltransaksi" disabled="disabled">Batal
-                    </button> -->
                   </div>
                   <div class="col-md-4">
                     <a class="btn icon-btn btn-lg btn-warning"
-                      style="padding: 1px 15px 3px 2px;border-radius:50px; margin-top: 10px; " data-toggle="modal"
-                      data-target="#modalHold" id="holdtransaksi" disabled="disabled">
+                      style="padding: 1px 15px 3px 2px;border-radius:50px;box-shadow:  -2px -2px 8px 4px white, 2px 2px 8px 4px #222; margin-top: 10px; "
+                      data-toggle="modal" data-target="#modalHold" id="holdtransaksi" disabled="disabled">
                       <span class="glyphicon btn-glyphicon glyphicon-refresh img-circle text-danger"
                         style="padding:8px;background:#ffffff;margin-right:4px;" disabled="disabled"></span>
                       Hold
                     </a>
-                    <!-- <button type="button" class="mb-xs mt-xs mr-xs btn btn-warning btn-lg btn-block" data-toggle="modal"
-                      data-target="#modalHold" id="holdtransaksi" disabled="disabled">Hold</button> -->
                   </div>
                   <div class="col-md-4">
                     <a class="btn icon-btn btn-lg btn-info"
-                      style="padding: 1px 15px 3px 2px;border-radius:50px; margin-top: 10px; " data-toggle="modal"
-                      data-target="#modal-payment" id="paymenttransaksi" disabled="disabled">
+                      style="padding: 1px 15px 3px 2px;border-radius:50px;box-shadow:  -2px -2px 8px 4px white, 2px 2px 8px 4px #222; margin-top: 10px; "
+                      data-toggle="modal" data-target="#modal-payment" id="paymenttransaksi" disabled="disabled">
                       <span class="glyphicon btn-glyphicon glyphicon-credit-card img-circle text-info"
                         style="padding:8px;background:#ffffff;margin-right:4px;" disabled="disabled"></span>
                       Bayar
                     </a>
-                    <!-- <button type="button" class="mb-xs mt-xs mr-xs btn btn-primary btn-lg btn-block" data-toggle="modal"
-                      data-target="#modal-payment" id="paymenttransaksi" disabled="disabled">Bayar</button> -->
                   </div>
                 </div>
               </div>
@@ -251,7 +244,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                   <div class="col-sm-12 col-md-3 col-lg-3">
                     <div class="thumbnail"
-                      style="padding:15px;border-radius:6px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);position:relative;margin:20px auto;  box-shadow:12px 12px 16px 0 rgba(0, 0, 0, 0.25),-8px -8px 12px 0 rgba(255, 255, 255, 0.3);">
+                      style="padding:15px;border-radius:6px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);position:relative;margin:20px auto;  border-radius:30px;box-shadow:  -2px -2px 8px 4px white, 2px 2px 8px 4px #222;">
                       <div class="thumb-preview">
                         <img src="<?php echo base_url() ?>/images/<?php echo $post['gambar']; ?>"
                           class="img-responsive fit-image" alt="Foto Produk">

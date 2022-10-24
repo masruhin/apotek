@@ -1,7 +1,7 @@
 <?php if (!empty($posts)) : foreach ($posts as $post) : ?>
 <div class="col-sm-12 col-md-3 col-lg-3">
   <div class="thumbnail"
-    style="padding:15px;border-radius:6px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);position:relative;margin:20px auto;  box-shadow:12px 12px 16px 0 rgba(0, 0, 0, 0.25),-8px -8px 12px 0 rgba(255, 255, 255, 0.3);">
+    style="padding:15px;border-radius:6px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);position:relative;margin:20px auto;  border-radius:30px;box-shadow:  -2px -2px 8px 4px white, 2px 2px 8px 4px #222;">
     <div class="thumb-preview">
       <img src="<?php echo base_url() ?>/images/<?php echo $post['gambar']; ?>" class="img-responsive fit-image"
         alt="Foto Produk">

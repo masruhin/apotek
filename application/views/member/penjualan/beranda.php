@@ -166,8 +166,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                       </div>
                     </section>
                   </div>
-
                 </div>
+
                 <section class="panel" style="margin-top:-30px;">
                   <div class="panel-body">
                     <div class="row">
@@ -175,8 +175,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <div class="row">
                           <div class="col-md-6 col-xl-12">
                             <section class="panel">
-                              <div class="panel-body bg-primary">
+                              <div class="panel-body"
+                                style="background-color:#daeba6; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                                 <div class="widget-summary">
+                                  <div clwass="widget-summary-col widget-summary-col-icon sm">
+                                    <div class="summary-icon bg-default" style="color:#000; background-color:#ffffff;">
+                                      <img src="<?php echo base_url() ?>/assets/images/icons/struk.png"
+                                        style="height:60px; width:60px" alt="">
+                                    </div>
+                                  </div>
                                   <div class="widget-summary-col">
                                     <div class="summary">
                                       <h4 class="title">Total Hutang Belum Dibayar</h4>
@@ -189,13 +196,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
                               </div>
                             </section>
                           </div>
-                          <div class="col-md-6 col-xl-12">
+                          <div class="col-md-12 col-lg-6 col-xl-5">
                             <section class="panel">
-                              <div class="panel-body bg-primary">
+                              <div class="panel-body"
+                                style="background-color:#daeba6; border-radius:40px;box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.4)">
                                 <div class="widget-summary">
+                                  <div clwass="widget-summary-col widget-summary-col-icon sm">
+                                    <div class="summary-icon bg-default" style="color:#000; background-color:#ffffff;">
+                                      <img src="<?php echo base_url() ?>/assets/images/icons/deadline.png"
+                                        style="height:60px; width:60px" alt="">
+                                    </div>
+                                  </div>
                                   <div class="widget-summary-col">
                                     <div class="summary">
-                                      <h4 class="title">Hutang Akan Jatuh Tempo</h4>
+                                      <h4 class="title">Hutang <strong> Akan</strong> Jatuh Tempo</h4>
                                       <div class="info">
                                         <strong class="amount" id="akan_jatuh_tempo"></strong>
                                       </div>
@@ -205,13 +219,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
                               </div>
                             </section>
                           </div>
-                          <div class="col-md-6 col-xl-12">
+                          <div class="col-md-12 col-lg-6 col-xl-6">
                             <section class="panel">
-                              <div class="panel-body bg-primary">
+                              <div class="panel-body"
+                                style="background-color:#daeba6; border-radius:40px;box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11);">
                                 <div class="widget-summary">
+                                  <div clwass="widget-summary-col widget-summary-col-icon sm">
+                                    <div class="summary-icon bg-default" style="color:#000; background-color:#ffffff;">
+                                      <img src="<?php echo base_url() ?>/assets/images/icons/expires.png"
+                                        style="height:60px; width:60px" alt="">
+                                    </div>
+                                  </div>
                                   <div class="widget-summary-col">
                                     <div class="summary">
-                                      <h4 class="title">Hutang Sudah Jatuh Tempo</h4>
+                                      <h4 class="title">Hutang <strong>Sudah</strong> Jatuh Tempo</h4>
                                       <div class="info">
                                         <strong class="amount" id="sudah_jatuh_tempo"></strong>
                                       </div>
@@ -221,10 +242,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
                               </div>
                             </section>
                           </div>
-                          <div class="col-md-6 col-xl-12">
+                          <div class="col-md-12 col-lg-6 col-xl-6">
                             <section class="panel">
-                              <div class="panel-body bg-primary">
+                              <div class="panel-body"
+                                style="background-color:#daeba6; border-radius:40px;box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11);">
                                 <div class="widget-summary">
+                                  <div clwass="widget-summary-col widget-summary-col-icon sm">
+                                    <div class="summary-icon bg-default" style="color:#000; background-color:#ffffff;">
+                                      <img src="<?php echo base_url() ?>/assets/images/icons/ceklist.png"
+                                        style="height:60px; width:60px" alt="">
+                                    </div>
+                                  </div>
                                   <div class="widget-summary-col">
                                     <div class="summary">
                                       <h4 class="title">Sudah Dibayar Minggu Ini</h4>
