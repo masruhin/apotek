@@ -37,7 +37,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
           <li>
             <a href="<?php echo base_url() ?>stok">
               <i class="fa fa-tasks" aria-hidden="true"></i>
-              <span>Stok</span>
+              <span>Data Stok</span>
             </a>
           </li>
           <li>
